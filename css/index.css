@@ -157,3 +157,12 @@ h2 {
   box-shadow: 0 0 10px 10px white;
   opacity: 0.4;
 }
+
+@media (max-width: 1024px) {
+  .diamond {
+    border: 5px solid rgb(130, 160, 225);
+    left: calc(50% - calc(.7 * 50vmin / 1.41) - 5px);
+    top: calc(50% - calc(.7 * 50vmin / 1.41) - 5px);
+    z-index: 1;
+  }
+}
