@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(200, 215, 245);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.col {
+  display: inline-block;
+  padding: 0 2%;
+  /* text-align: left; */
+  vertical-align: top;
+  width: 96%;
+}
+
+.hovered {
+  opacity: .75;
+}
+
+.map {
+  width: 100%;
+}
+
+.row {
+  padding: 2%;
+  text-align: left;
+}
+
+.website-card {
+  background-color: rgb(140, 150, 180);
+  background-color: rgba(255, 255, 255, .25);
+  box-shadow: 5px 5px 15px grey;
+  margin: 1%;
+  padding: 0 1% 1%;
+}
+
+.website-img {
+  border: rgb(140, 150, 180);
+  border: 3px solid rgba(255, 255, 255, .25);
+  width: calc(100% - 6px);
+}
+
+/*************************** Desktops and Laptops ***************************/
+
+@media (min-width: 800px) {
+  .col {
+    width: 45%;
+  }
+  .col3 {
+    width: 29%;
+  }
+}
