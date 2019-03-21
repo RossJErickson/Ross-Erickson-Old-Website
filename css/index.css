@@ -4,17 +4,22 @@ body {
   background-color: rgb(168, 191, 235);
   /* background-color: black; */
   color: rgb(200, 200, 200);
+  font-family: 'Muli', Arial, sans-serif;
   margin: 0;
   text-align: center;
   /* transform: rotate(20deg); */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Volkhov', serif;
+}
+
 h1 {
-  font-size: 5.4vmin;
+  font-size: 4.5vmin;
 }
 
 h2 {
-  font-size: 2.7vmin;
+  font-size: 2.5vmin;
   margin: 1vmin;
 }
 
