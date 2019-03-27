@@ -32,6 +32,16 @@ h2 {
   width: 100vmin;
 }
 
+.mobile-disclaimer {
+  color: black;
+  font-size: 9px;
+  font-style: italic;
+  left: 1rem;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+
 .diamond {
   border-radius: 3%;
   background-color: rgb(25, 50, 110);
@@ -47,13 +57,42 @@ h2 {
 .greeting {
   height: 33vmin;
   position: relative;
-  top: calc(50% - 20.1vmin);
+  top: calc(50% - 19.4vmin);
   transform: rotate(-45deg);
 }
 
 .huge {
   color: rgb(130, 160, 225);
   font-size: 16vmin;
+}
+
+.contact{
+  display: inline-block;
+  margin-top: 7vmin;
+  color: rgb(200, 200, 200);
+}
+
+.contact:hover {
+  color: rgb(130, 160, 225);
+}
+
+.contact:visited, .contact:link {
+  text-decoration: none;
+}
+
+.contact-text {
+  color: inherit;
+  display: block;
+  font-size: 2vmin;
+  margin: 0;
+  text-decoration: overline;
+}
+
+.contact-icon {
+  display: block;
+  font-size: 2.5vmin;
+  margin: 0;
+  text-decoration: none;
 }
 
 .arm {
@@ -164,6 +203,11 @@ h2 {
 }
 
 @media (max-width: 1024px) {
+
+  .mobile-disclaimer {
+    visibility: visible;
+  }
+
   .diamond {
     border: 5px solid rgb(130, 160, 225);
     left: calc(50% - calc(.7 * 50vmin / 1.41) - 5px);
