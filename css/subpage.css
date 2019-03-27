@@ -18,7 +18,6 @@ li {
   background-color: rgb(140, 150, 180);
   background-color: rgba(255, 255, 255, .25);
   box-shadow: 5px 5px 15px grey;
-  margin: 1%;
   padding: 0 1% 1%;
 }
 
@@ -30,8 +29,8 @@ li {
 
 .col {
   display: inline-block;
+  margin: 2% 0;
   padding: 0 2%;
-  /* text-align: left; */
   vertical-align: top;
   width: 96%;
 }
@@ -45,7 +44,7 @@ li {
 }
 
 .row {
-  padding: 2%;
+  padding: 0 2%;
   text-align: left;
 }
 
@@ -63,9 +62,13 @@ li {
 
 @media (min-width: 800px) {
   .col {
+    margin: 1%;
     width: 45%;
   }
   .col3 {
     width: 27%;
+  }
+  .row {
+    padding: 2%;
   }
 }
