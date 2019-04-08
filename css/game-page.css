@@ -1,0 +1,13 @@
+body {
+  color: white;
+  background-color: rgb(50, 50, 50);
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    color: rgb(250, 250, 250);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 1rem;
+    text-shadow: 4px 4px 2px black;
+}

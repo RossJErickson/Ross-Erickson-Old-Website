@@ -1,0 +1,21 @@
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.card-body {
+  background-color: rgb(210, 195, 195);
+  color: black;
+}
+
+.card-header {
+  background-color: rgb(80, 30, 20);
+}
+
+.card-header .btn-link {
+  color: white;
+  font-family: 'Bitter', serif;
+}
+
+.strong {
+  font-weight: 700;
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Proelia</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Cinzel+Decorative:900|Nunito:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/game-page.css">
+    <link rel="stylesheet" href="css/proelia.css">
+
+  </head>
+  <body>
+    <h1>Proelia</h1>
+    <div class="accordion" id="game-rules">
+      <div class="card">
+        <div class="card-header" id="deck-setup" type="button" data-toggle="collapse" data-target="#collapse-deck-setup" aria-expanded="true" aria-controls="collapse-deck-setup">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Deck Setup
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse-deck-setup" class="collapse" aria-labelledby="deck-setup">
+          <div class="card-body">
+            <ul>
+              <li>
+                Each player gets one of each common order. Shuffle the remaining common orders (there should be one of each) together with the type-based orders, and then divide that deck into piles of four. Give each player three of the piles and set the remaining pile aside (it will not be used in this game). From each of their three piles, each player chooses one order to keep for themselves and one order to discard. Once this is done, the players exchange their resulting piles of two and then again choose one order from each to keep and discard the remaining one. All discarded orders are set aside and will not be used in this game.
+              </li>
+              <li>
+                Shuffle the inspiration cards and deal each player two of them. The remainder will not be used in this game.
+              </li>
+              <li>
+                IF YOU ARE LEFT WITH A PILE THAT HAS NONE YOU CAN USE, YOU MAY DRAW ONE OF CHOICE FROM THE FOUR THAT WERE ORIGINALLY LEFT OUT
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="army-setup" type="button" data-toggle="collapse" data-target="#collapse-army-setup" aria-expanded="false" aria-controls="collapse-army-setup">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Army Setup
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-army-setup" class="collapse" aria-labelledby="army-setup">
+          <div class="card-body">
+            <ul>
+              <li>
+                Each player chooses a color and a coin side (heads or tails)
+              </li>
+              <li>
+                Each player takes all the regiment cards of their color and chooses in secret six regiments that will make up their army. No more than three of the same type of regiment may be chosen, and players must have three different types of regiments. One (and only one) of the chosen regiments must be a commander regiment. Once the players have chosen their six regiments, they may reveal them and take the corresponding regiment tokens.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="board-setup" type="button" data-toggle="collapse" data-target="#collapse-board-setup" aria-expanded="false" aria-controls="collapse-board-setup">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Board Setup
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-board-setup" class="collapse" aria-labelledby="board-setup">
+          <div class="card-body">
+            <ul>
+              <li>
+                Place each regiment’s card below the 'awaiting orders' card
+              </li>
+              <li>
+                All your order cards and your two inspiration cards make up your hand of cards.
+              </li>
+              <li>
+                Players take turns placing their regiment tokens one at a time within the rally zone on their side of the board. Rally zones are the interconnected group of nodes filled in with grey. To determine who places one of their regiment tokens first, flip a coin: the player whose side it lands on may decide. There is no set sequence in which players must place their regiment tokens.
+              </li>
+              <li>
+                After deploying, each player chooses in secret three of their orders that they will place onto the order grid as their starting orders. Once players have chosen, they can reveal which three orders they chose and place them onto the order grid.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="player-turn" type="button" data-toggle="collapse" data-target="#collapse-player-turn" aria-expanded="false" aria-controls="collapse-player-turn">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Player Turn
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-player-turn" class="collapse" aria-labelledby="player-turn">
+          <div class="card-body">
+            <ul>
+              <li>
+                Players take turns taking turns. To determine who goes first, flip a coin: the player whose side it lands on may choose who goes first.
+              </li>
+              <li>
+                Choose up to two regiment cards from beneath your order cards and set them aside. These will be the regiments you give orders to.
+              </li>
+              <li>
+                Move all regiment cards that are readying to instead be maintaining the orders they carried out.
+              </li>
+              <li>
+                Replace one of the three order cards if desired, and move all regiment cards that were maintaining it to be maintaining 'awaiting orders' instead.
+              </li>
+              <li>
+                Move the two regiment cards that you set aside to be above two order cards of your choice; those regiments then carry out those orders. Regiments cannot be placed above the same order card as another regiment.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="moving" type="button" data-toggle="collapse" data-target="#collapse-moving" aria-expanded="false" aria-controls="collapse-moving">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-moving" aria-expanded="false" aria-controls="collapse-moving">
+              Moving
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-moving" class="collapse" aria-labelledby="moving">
+          <div class="card-body">
+            <ul>
+              <li>
+                When an order says to move, the regiment carrying out the order may move to any node connected to its current node (an adjacent node). Each bonus move point it has allows it to move across one more node connection with its move, but it is still all considered one move (e.g. a knight regiment, with +1 move, may move across two node connections with its move).
+              </li>
+              <li>
+                If a regiment enters a forest or a shallows node, its move immediately ends, regardless of how many bonus move points it has.
+              </li>
+              <li>
+                Regiments cannot move into the same node as another regiment except to fight.
+              </li>
+              <li>
+                Regiments cannot move through other regiments.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="fighting" type="button" data-toggle="collapse" data-target="#collapse-fighting" aria-expanded="false" aria-controls="collapse-fighting">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-fighting" aria-expanded="false" aria-controls="collapse-fighting">
+              Fighting
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-fighting" class="collapse" aria-labelledby="fighting">
+          <div class="card-body">
+            <ul>
+              <li>
+                Fighting is carried out after all the orders. A fight happens between regiments when an order with a green circle around its fight value causes the regiment carrying out the order to move into a node with an enemy regiment.
+              </li>
+              <li>
+                When regiments fight, use the fight scores of the two regiments (defined on the order card and modified by other rules) and the chart below to see who wins. The losing regiment is routed - remove it from the game.
+                <ul>
+                  <li>
+                    Attacker’s fight score is 1 or more higher: attacker wins
+                  </li>
+                  <li>
+                    Fight scores are tied: flip a coin to determine the winner
+                  </li>
+                  <li>
+                    Defender’s fight score is 1 higher: flip a coin to determine the winner
+                  </li>
+                  <li>
+                    Defender’s fight score is 2 or more higher: defender wins
+                  </li>
+                </ul>
+              </li>
+              <li>
+                A regiment that can fight at range can fight with any regiment within its range when its order has a green circle around its fight value. A regiment is in range if it is no more node connections away than the regiment’s range value.
+                <ul><li>When an attacking regiment fights at range, it does not get routed for losing.</li></ul>
+              </li>
+              <li>
+                If multiple regiments are fighting a single enemy, they each get +1 fight for each other allied regiment involved. Otherwise, the fights are carried out individually as normal. If multiple allied regiments survive the fight, choose one to stay in the node and move the others to any adjacent node. This may result in additional fights (as the regiment breaks through the battle line).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="other-rules" type="button" data-toggle="collapse" data-target="#collapse-other-rules" aria-expanded="false" aria-controls="collapse-other-rules">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-other-rules" aria-expanded="false" aria-controls="collapse-other-rules">
+              Other Rules
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-other-rules" class="collapse" aria-labelledby="other-rules">
+          <div class="card-body">
+            <ul>
+              <li>
+                You win the game when the enemy commander's regiment is routed or four of the enemy regiments are routed.
+              </li>
+              <li>
+                Regiments maintain fight values and effects of completed orders but cannot take the actions again.
+              </li>
+              <li>
+                Players may play an inspiration card at any time the inspiration card’s effects say it may be played. Their effects take place immediately. Players may only play one inspiration card per turn. Once an inspiration card is played, it is discarded and cannot be played again.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="glossary" type="button" data-toggle="collapse" data-target="#collapse-glossary" aria-expanded="false" aria-controls="collapse-glossary">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Glossary
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-glossary" class="collapse" aria-labelledby="glossary">
+          <div class="card-body">
+            <ul>
+              <li>
+                <span class="strong">Regiments</span>
+                <ul>
+                  <li>
+                    <span class="strong">Regiment</span> - The basic unit of troops in your army. It is represented on the board by one of the regiment tokens, and is one of five types: heavy infantry, skirmishers, archers, riders, or knights.
+                  </li>
+                  <li>
+                    <span class="strong">Commander's Regiment</span> - The regiment that contains the commander of your army. The commander's regiment is only routed when it has lost two fights, or three if it is a heavy infantry regiment.
+                  </li>
+                  <li>
+                    <span class="strong">Heavy Infantry</span> - A heavy infantry regiment is only routed when it has lost two fights.
+                  </li>
+                  <li>
+                    <span class="strong">Skirmishers</span> – Skirmishers get +2 fight in forests, hills, and shallows. Any turn in which skirmishers move one and only one node, they may move again.
+                  </li>
+                  <li>
+                    <span class="strong">Archers</span> - Archers can attack 2 nodes away if the regiment does not move, -1 fight when fighting in the node it occupies.
+                  </li>
+                  <li>
+                    <span class="strong">Riders</span> - Riders have a permanent +2 move.
+                  </li>
+                  <li>
+                    <span class="strong">Knights</span> - Knights have a permanent +1 fight and +1 move.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span class="strong">The Map</span>
+                <ul>
+                  <li>
+                    <span class="strong">Node</span> - Nodes are spaces on the map that may be occupied by regiments. They are represented by circles and connected to other nodes by lines.
+                  </li>
+                  <li>
+                    <span class="strong">Forest</span> - If a regiment enters a forest node, its move immediately ends, regardless of how many bonus move points it has. When attacking at range, you cannot attack through a forest node, though you may attack into or out of one. Forest nodes are represented by dark green outlines.
+                  </li>
+                  <li>
+                    <span class="strong">Hill</span> - Regiments on a hill node gain +1 fight while defending. Hills are represented by brown outlines.
+                  </li>
+                  <li>
+                    <span class="strong">Shallows</span> - If a regiment enters a shallows node, its move immediately ends, regardless of how many bonus move points it has. Shallows nodes are represented by light blue outlines.
+                  </li>
+                  <li>
+                    <span class="strong">Deep Water</span> - Regiments may not move into a deep water node. Deep water nodes are represented by dark blue outlines.
+                  </li>
+                  <li>
+                    <span class="strong">Rally Zone</span> - Rally zones are the groups of interconnected nodes where regiments may be set up when setting up the board. Each player has their own rally zone. Rally zone nodes are represented by having a greyed-out filling.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span class="strong">Cards</span>
+                <ul>
+                  <li>
+                    <span class="strong">Common Orders</span> - Common orders are orders that any regiment may be given. Each player has at least one of each common order. The common orders are: Advance, Charge, Engage, Flank, Form Up, Hold, Reform, and Regroup.
+                  </li>
+                  <li>
+                    <span class="strong">Type-Based Orders</span> - Type-based orders may only be given to regiments of their associated type. The type-based orders are: Fire at Will, Harass, Hit and Run, Impact, Raise Shields, Screen, Shield Wall, Stalk, Trample, and Volley.
+                  </li>
+                  <li>
+                    <span class="strong">Inspirations</span> - Inspirations are special one-time abilities that may be granted to regiments.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="game-pieces" type="button" data-toggle="collapse" data-target="#collapse-game-pieces" aria-expanded="false" aria-controls="collapse-game-pieces">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Game Pieces
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-game-pieces" class="collapse" aria-labelledby="game-pieces">
+          <div class="card-body">
+            <ul>
+              <li>
+                <a>Proelia Game Boards</a>
+              </li>
+              <li>
+                <a>Proelia Cards</a>
+              </li>
+              <li>
+                <a>Proelia Tokens</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
