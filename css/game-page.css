@@ -5,9 +5,28 @@ body {
 }
 
 h1 {
-    color: rgb(250, 250, 250);
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 1rem;
-    text-shadow: 4px 4px 2px black;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 2px black;
+}
+
+li {
+  margin: 8px;
+}
+
+.accordion {
+  background-color: rgb(50, 50, 50);
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.title {
+  color: rgb(250, 250, 250);
+  margin: 1rem;
 }
