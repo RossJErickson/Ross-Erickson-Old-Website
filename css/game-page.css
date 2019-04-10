@@ -20,6 +20,7 @@ li {
 
 .card-header {
   border-radius: 0;
+  cursor: pointer;
   min-height: 3rem;
 }
 

@@ -16,35 +16,13 @@
 
   </head>
   <body>
-    <h1>Proelia</h1>
+    <div class="title">
+      <h1>Proelia</h1>
+      <p class="emphasis">A Board Game of Historical Battles</p>
+    </div>
     <div class="accordion" id="game-rules">
       <div class="card">
-        <div class="card-header" id="deck-setup" type="button" data-toggle="collapse" data-target="#collapse-deck-setup" aria-expanded="true" aria-controls="collapse-deck-setup">
-          <h2 class="mb-0">
-            <button class="btn btn-link">
-              Deck Setup
-            </button>
-          </h2>
-        </div>
-
-        <div id="collapse-deck-setup" class="collapse" aria-labelledby="deck-setup">
-          <div class="card-body">
-            <ul>
-              <li>
-                Each player gets one of each common order. Shuffle the remaining common orders (there should be one of each) together with the type-based orders, and then divide that deck into piles of four. Give each player three of the piles and set the remaining pile aside (it will not be used in this game). From each of their three piles, each player chooses one order to keep for themselves and one order to discard. Once this is done, the players exchange their resulting piles of two and then again choose one order from each to keep and discard the remaining one. All discarded orders are set aside and will not be used in this game.
-              </li>
-              <li>
-                Shuffle the inspiration cards and deal each player two of them. The remainder will not be used in this game.
-              </li>
-              <li>
-                IF YOU ARE LEFT WITH A PILE THAT HAS NONE YOU CAN USE, YOU MAY DRAW ONE OF CHOICE FROM THE FOUR THAT WERE ORIGINALLY LEFT OUT
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="army-setup" type="button" data-toggle="collapse" data-target="#collapse-army-setup" aria-expanded="false" aria-controls="collapse-army-setup">
+        <div class="card-header" id="army-setup" data-toggle="collapse" data-target="#collapse-army-setup" aria-expanded="false" aria-controls="collapse-army-setup">
           <h2 class="mb-0">
             <button class="btn btn-link">
               Army Setup
@@ -53,19 +31,65 @@
         </div>
         <div id="collapse-army-setup" class="collapse" aria-labelledby="army-setup">
           <div class="card-body">
-            <ul>
+            <ol>
               <li>
-                Each player chooses a color and a coin side (heads or tails)
+                Each player chooses an army color (red or purple) and a coin side (heads or tails).
               </li>
               <li>
-                Each player takes all the regiment cards of their color and chooses in secret six regiments that will make up their army. No more than three of the same type of regiment may be chosen, and players must have three different types of regiments. One (and only one) of the chosen regiments must be a commander regiment. Once the players have chosen their six regiments, they may reveal them and take the corresponding regiment tokens.
+                Each player takes all the regiment cards of their color and chooses in secret six regiments that will make up their army, subject to the following restraints:
+                <ul>
+                  <li>
+                    No more than three of the same type of regiment may be chosen
+                  </li>
+                  <li>
+                    Players must have three different types of regiments.
+                  </li>
+                  <li>
+                    One (and only one) of the chosen regiments must be a commander regiment (labeled with a 'C').
+                  </li>
+                </ul>
               </li>
-            </ul>
+              <li>
+                Once the players have chosen their six regiments, they may reveal them and take the regiment tokens of their color that correspond to their choices in type and label ('C', 'I', 'II', 'III').
+              </li>
+            </ol>
           </div>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-header" id="board-setup" type="button" data-toggle="collapse" data-target="#collapse-board-setup" aria-expanded="false" aria-controls="collapse-board-setup">
+        <div class="card-header" id="dealing" data-toggle="collapse" data-target="#collapse-dealing" aria-expanded="true" aria-controls="collapse-dealing">
+          <h2 class="mb-0">
+            <button class="btn btn-link">
+              Dealing the Cards
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-dealing" class="collapse" aria-labelledby="dealing">
+          <div class="card-body">
+            <ol>
+              <li>
+                Deal one of each common order to each player.
+              </li>
+              <li>
+                Shuffle the remaining common orders (there should be one of each) together with the type-based orders, and then divide that deck into piles of four. Give each player three of the piles and set the remaining pile aside.
+              </li>
+              <li>
+                From each of their three piles, each player chooses one order to keep for themselves and one order to discard. Once this is done, the players exchange their resulting piles of two and then again choose one order from each to keep and then discard the remaining one. All discarded orders are set aside and will not be used in this game.
+              </li>
+              <li>
+                If you are left with a pile that only has type-based orders you cannot use, you may instead take one card of your choice from the pile that was set aside in step II.
+              </li>
+              <li>
+                Shuffle the inspiration cards and deal each player two of them. The remainder will not be used in this game.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="board-setup" data-toggle="collapse" data-target="#collapse-board-setup" aria-expanded="false" aria-controls="collapse-board-setup">
           <h2 class="mb-0">
             <button class="btn btn-link">
               Board Setup
@@ -91,8 +115,9 @@
           </div>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-header" id="player-turn" type="button" data-toggle="collapse" data-target="#collapse-player-turn" aria-expanded="false" aria-controls="collapse-player-turn">
+        <div class="card-header" id="player-turn" data-toggle="collapse" data-target="#collapse-player-turn" aria-expanded="false" aria-controls="collapse-player-turn">
           <h2 class="mb-0">
             <button class="btn btn-link">
               Player Turn
@@ -123,9 +148,9 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="moving" type="button" data-toggle="collapse" data-target="#collapse-moving" aria-expanded="false" aria-controls="collapse-moving">
+        <div class="card-header" id="moving" data-toggle="collapse" data-target="#collapse-moving" aria-expanded="false" aria-controls="collapse-moving">
           <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-moving" aria-expanded="false" aria-controls="collapse-moving">
+            <button class="btn btn-link">
               Moving
             </button>
           </h2>
@@ -151,9 +176,9 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="fighting" type="button" data-toggle="collapse" data-target="#collapse-fighting" aria-expanded="false" aria-controls="collapse-fighting">
+        <div class="card-header" id="fighting" data-toggle="collapse" data-target="#collapse-fighting" aria-expanded="false" aria-controls="collapse-fighting">
           <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-fighting" aria-expanded="false" aria-controls="collapse-fighting">
+            <button class="btn btn-link">
               Fighting
             </button>
           </h2>
@@ -194,9 +219,9 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="other-rules" type="button" data-toggle="collapse" data-target="#collapse-other-rules" aria-expanded="false" aria-controls="collapse-other-rules">
+        <div class="card-header" id="other-rules" data-toggle="collapse" data-target="#collapse-other-rules" aria-expanded="false" aria-controls="collapse-other-rules">
           <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-other-rules" aria-expanded="false" aria-controls="collapse-other-rules">
+            <button class="btn btn-link">
               Other Rules
             </button>
           </h2>
@@ -217,8 +242,9 @@
           </div>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-header" id="glossary" type="button" data-toggle="collapse" data-target="#collapse-glossary" aria-expanded="false" aria-controls="collapse-glossary">
+        <div class="card-header" id="glossary" data-toggle="collapse" data-target="#collapse-glossary" aria-expanded="false" aria-controls="collapse-glossary">
           <h2 class="mb-0">
             <button class="btn btn-link">
               Glossary
@@ -295,8 +321,9 @@
           </div>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-header" id="game-pieces" type="button" data-toggle="collapse" data-target="#collapse-game-pieces" aria-expanded="false" aria-controls="collapse-game-pieces">
+        <div class="card-header" id="game-pieces" data-toggle="collapse" data-target="#collapse-game-pieces" aria-expanded="false" aria-controls="collapse-game-pieces">
           <h2 class="mb-0">
             <button class="btn btn-link">
               Game Pieces
