@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/game-page.css">
+    <link rel="stylesheet" href="css/game_page.css">
     <link rel="stylesheet" href="css/proelia.css">
 
   </head>
@@ -76,7 +76,7 @@
                 Shuffle the remaining common orders (there should be one of each) together with the type-based orders, and then divide that deck into piles of four. Give each player three of the piles and set the remaining pile aside.
               </li>
               <li>
-                From each of their three piles, each player chooses one order to keep for themselves and one order to discard. Once this is done, the players exchange their resulting piles of two. From each of these new piles, players choose one order to keep and then discard the remaining one. All discarded orders are set aside and will not be used in this game.
+                From each of their three piles, each player chooses one order to keep for themselves and one order to discard. Once this is done, the players exchange their resulting piles of two. From each of their new piles, players choose one order to keep and then discard the remaining one. All discarded orders are set aside and will not be used in this game.
                 <ul><li>If you are left with a pile that only has type-based orders you cannot use, you may instead take one card of your choice from the pile that was set aside in Step II.</li></ul>
               </li>
               <li>
@@ -108,7 +108,7 @@
                 To place a regiment, pick one of your regiment tokens and place it in one of the nodes in your rally zone. Players take turns placing their regiment tokens until each player has placed all six of their regiment tokens.
               </li>
               <li>
-                After the regiment tokens have been placed, each player chooses in secret three of their orders that will be their starting orders. Once both players have chosen, they place those orders onto their order grid each in a separate 'order' section.
+                Each player chooses in secret three of their orders that will be their starting orders. Once both players have chosen, they place those orders onto their order grid each in a separate 'order' section.
               </li>
             </ol>
           </div>
@@ -127,19 +127,62 @@
           <div class="card-body">
             <ul>
               <li>
-                Players take turns taking turns. To determine who goes first, flip a coin: the player whose side it lands on may choose who goes first.
+                Players take turns taking turns until one player has achieved victory. To determine who goes first, flip a coin: the player who wins the flip chooses who takes the first turn.
               </li>
               <li>
-                Choose up to two regiment cards from beneath your order cards and set them aside. These will be the regiments you give orders to.
+                Taking your turn:
+                <ol>
+                  <li>
+                    Choose up to two regiment cards from the 'maintaining' sections on your order grid and set them aside. These will be the regiments you give orders to this turn.
+                  </li>
+                  <li>
+                    Move all regiment cards that are readying to instead be maintaining the orders that they last carried out.
+                  </li>
+                  <li>
+                    Swap one of the three order cards with an order from your hand if desired. If you do, move all regiment cards that were maintaining the swapped order to be maintaining 'awaiting orders' instead.
+                  </li>
+                  <li>
+                    Move the two regiment cards that you set aside to be above two order cards of your choice, in the 'readying' section; those regiments then carry out their respective orders.
+                    <ul><li>Regiments are not allowed to share the same order card as another regiment, though two regiments may seperately be given identical orders from two identical order cards.</li></ul>
+                  </li>
+                </ol>
               </li>
               <li>
-                Move all regiment cards that are readying to instead be maintaining the orders they carried out.
+                Carrying out orders:
+                <ul>
+                  <li>
+                    When a regiment carries out an order, it may perform each action marked with a 🔼 that is on the order card. The actions on the order card that are performed must be performed from top to bottom.
+                  </li>
+                  <li>
+                    All rules marked with a 🔼 on the order are in effect during the entire turn in which it is carrying out that order, and then cease to take effect once that player's turn is over.
+                  </li>
+                </ul>
               </li>
               <li>
-                Replace one of the three order cards if desired, and move all regiment cards that were maintaining it to be maintaining 'awaiting orders' instead.
+                Readying after carrying out an order:
+                <ul>
+                  <li>
+                    When a regiment is done carrying out its order, it is considered to be 'readying'. This is represented by being in a 'readying' section on the order grid, which effectively prohibits them from being chosen for another order on the next turn.
+                  </li>
+                </ul>
               </li>
               <li>
-                Move the two regiment cards that you set aside to be above two order cards of your choice; those regiments then carry out those orders. Regiments cannot be placed above the same order card as another regiment.
+                Maintaining orders:
+                <ul>
+                  <li>
+                    When a regiment is in a 'maintaining' section of the order grid, it is considered to be maintaining the order that is above it.
+                  </li>
+                  <li>
+                    Rules marked with a 🔄 are in effect while a regiment is carrying out that order, readying after having carried out that order, or maintaining that order.
+                  </li>
+                  <li>
+                    Rules marked with a ⏳ are worded to be optional actions. When a player decides to have a regiment take such an action, that regiment is moved to be maintaining 'awaiting orders' as soon as it completes the described action.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Achieving Victory:
+                <ul><li>A player is victorious when they a) rout their opponent's commander regiment or b) rout at least four of their opponent's six regiments.</li></ul>
               </li>
             </ul>
           </div>
@@ -158,13 +201,17 @@
           <div class="card-body">
             <ul>
               <li>
-                When an order says to move, the regiment carrying out the order may move to any node connected to its current node (an adjacent node). Each bonus move point it has allows it to move across one more node connection with its move, but it is still all considered one move (e.g. a knight regiment, with +1 move, may move across two node connections with its move).
+                When a regiment moves, it may move to an adjacent node (i.e. any node connected to its current node).
               </li>
               <li>
-                If a regiment enters a forest or a shallows node, its move immediately ends, regardless of how many bonus move points it has.
+                Each bonus it has to its move from its order and/or regiment type allows it to move across one more node connection when it moves. It is still all considered to be one move (e.g. a knight regiment, with 'move+', may move across two node connections with its move).
+                <ul><li>Bonuses are marked with a '+' after the word 'move', as in the example above.</li></ul>
               </li>
               <li>
-                Regiments cannot move into the same node as another regiment except to fight.
+                A regiment cannot move into the same node as another regiment except to fight an enemy regiment. An order allows a regiment to fight with its move when the order has a green circle around its fight value.
+              </li>
+              <li>
+                If a regiment enters a forest or a shallows node, its move immediately ends, regardless of any bonuses it has to its move.
               </li>
               <li>
                 Regiments cannot move through other regiments.
@@ -186,31 +233,53 @@
           <div class="card-body">
             <ul>
               <li>
-                Fighting is carried out after all the orders. A fight happens between regiments when an order with a green circle around its fight value causes the regiment carrying out the order to move into a node with an enemy regiment.
+                Fighting occurs after all the orders have been carried out. A fight happens between regiments when they are on the same node.
               </li>
               <li>
-                When regiments fight, use the fight scores of the two regiments (defined on the order card and modified by other rules) and the chart below to see who wins. The losing regiment is routed - remove it from the game.
+                When regiments fight, each regiment's fight score is equal to the value shown on their order card plus any other modifiers that are in effect. To determine which regiment wins the fight, use the fight scores of the two regiments and the chart below to see who wins. The losing regiment is routed - remove it from the game.
                 <ul>
                   <li>
-                    Attacker’s fight score is 1 or more higher: attacker wins
+                    Fight Result Chart:
+                    <ul>
+                      <li>
+                        Attacker’s fight score is 1 or more higher: attacker wins
+                      </li>
+                      <li>
+                        Fight scores are tied or the defender's fight score is only higher by 1: flip a coin to determine the winner
+                      </li>
+                      <li>
+                        Defender’s fight score is higher by 2 or more: defender wins
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    Fight scores are tied: flip a coin to determine the winner
+                    The attacking regiment is the regiment that entered the other regiment's node. That other regiment is the defending regiment.
                   </li>
                   <li>
-                    Defender’s fight score is 1 higher: flip a coin to determine the winner
-                  </li>
-                  <li>
-                    Defender’s fight score is 2 or more higher: defender wins
+                    A regiment's order card is the order card they are currently carrying out, readying after having carried out, or maintaining.
                   </li>
                 </ul>
               </li>
               <li>
-                A regiment that can fight at range can fight with any regiment within its range when its order has a green circle around its fight value. A regiment is in range if it is no more node connections away than the regiment’s range value.
-                <ul><li>When an attacking regiment fights at range, it does not get routed for losing.</li></ul>
+                When a regiment can fight at range, it can fight with a regiment without having to move into that regiment's node. Instead, the regiment fighting at range may fight with any regiment that is no more node connections away than its range value.
+                <ul>
+                  <li>
+                    A regiment that can fight at range is still only allowed to fight while carrying out its order if that order has a green circle around its fight value.
+                  </li>
+                  <li>
+                    The regiment that is choosing to fight at range is considered to be the attacker.
+                  </li>
+                  <li>
+                    When an attacking regiment fights at range, it does not get routed for losing.
+                  </li>
+                </ul>
               </li>
               <li>
-                If multiple regiments are fighting a single enemy, they each get +1 fight for each other allied regiment involved. Otherwise, the fights are carried out individually as normal. If multiple allied regiments survive the fight, choose one to stay in the node and move the others to any adjacent node. This may result in additional fights (as the regiment breaks through the battle line).
+                If multiple regiments are fighting a single enemy, they each get +⚔️ for each other allied regiment involved. Otherwise, the fights are carried out individually as normal.
+              </li>
+              <li>
+                If multiple regiments survive a fight, the defender stays in the node and the others must move to any empty and adjacent node that they could have reached with their original move. If no such node exists, they are routed.
+                <ul><li>If there are multiple surviving defenders, the player who controls them chooses one to remain in the node and moves the rest to any empty and adjacent node.
               </li>
             </ul>
           </div>
@@ -229,13 +298,18 @@
           <div class="card-body">
             <ul>
               <li>
-                You win the game when the enemy commander's regiment is routed or four of the enemy regiments are routed.
-              </li>
-              <li>
-                Regiments maintain fight values and effects of completed orders but cannot take the actions again.
-              </li>
-              <li>
-                Players may play an inspiration card at any time the inspiration card’s effects say it may be played. Their effects take place immediately. Players may only play one inspiration card per turn. Once an inspiration card is played, it is discarded and cannot be played again.
+                Inspirations
+                <ul>
+                  <li>
+                    Players may play an inspiration card at any time the inspiration card’s effects say it may be played. Their effects take place immediately.
+                  </li>
+                  <li>
+                    Players may only play one inspiration card per turn.
+                  </li>
+                  <li>
+                    Once an inspiration card is played, it is discarded and cannot be played again.
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -266,16 +340,16 @@
                     <span class="strong">Heavy Infantry</span> - A heavy infantry regiment is only routed when it has lost two fights.
                   </li>
                   <li>
-                    <span class="strong">Skirmishers</span> – Skirmishers get +2 fight in forests, hills, and shallows. Any turn in which skirmishers move one and only one node, they may move again.
+                    <span class="strong">Skirmishers</span> – Skirmishers get +⚔️⚔️ in forests, hills, and shallows. Any turn in which skirmishers move one and only one node, they may make another move without any move bonuses.
                   </li>
                   <li>
-                    <span class="strong">Archers</span> - Archers can attack 2 nodes away if the regiment does not move, -1 fight when fighting in the node it occupies.
+                    <span class="strong">Archers</span> - Archers can fight at a range of 2 if they did not move. Archers get -⚔️ when fighting in the node they occupy.
                   </li>
                   <li>
-                    <span class="strong">Riders</span> - Riders have a permanent +2 move.
+                    <span class="strong">Riders</span> - Riders have move++.
                   </li>
                   <li>
-                    <span class="strong">Knights</span> - Knights have a permanent +1 fight and +1 move.
+                    <span class="strong">Knights</span> - Knights have move+ and +⚔️.
                   </li>
                 </ul>
               </li>
@@ -289,7 +363,7 @@
                     <span class="strong">Forest</span> - If a regiment enters a forest node, its move immediately ends, regardless of how many bonus move points it has. When attacking at range, you cannot attack through a forest node, though you may attack into or out of one. Forest nodes are represented by dark green outlines.
                   </li>
                   <li>
-                    <span class="strong">Hill</span> - Regiments on a hill node gain +1 fight while defending. Hills are represented by brown outlines.
+                    <span class="strong">Hill</span> - Regiments on a hill node gain +⚔️ while defending. Hills are represented by brown outlines.
                   </li>
                   <li>
                     <span class="strong">Shallows</span> - If a regiment enters a shallows node, its move immediately ends, regardless of how many bonus move points it has. Shallows nodes are represented by light blue outlines.
@@ -316,6 +390,20 @@
                   </li>
                 </ul>
               </li>
+              <li>
+                <span class="strong">Other</span>
+                <ul>
+                  <li>
+                    ⚔️ - this is a symbol that denotes fight values. '+⚔️⚔️', for example, means +2 fight value.
+                  </li>
+                  <li>
+                    🚩 - this symbol is shorthand for 'regiment'
+                  </li>
+                  <li>
+                    <span class="strong">Allied Regiments</span> - Allied regiments are regiments that belong to the same player.
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -325,7 +413,7 @@
         <div class="card-header" id="game-pieces" data-toggle="collapse" data-target="#collapse-game-pieces" aria-expanded="false" aria-controls="collapse-game-pieces">
           <h2 class="mb-0">
             <button class="btn btn-link">
-              Game Pieces
+              Game Pieces (Prototypes)
             </button>
           </h2>
         </div>
@@ -333,13 +421,13 @@
           <div class="card-body">
             <ul>
               <li>
-                <a>Proelia Game Boards</a>
+                <a target="_blank" href="game_pdfs/proelia_game_boards.pdf">Proelia Game Boards</a>
               </li>
               <li>
-                <a>Proelia Cards</a>
+                <a target="_blank" href="game_pdfs/proelia_cards.pdf">Proelia Cards</a>
               </li>
               <li>
-                <a>Proelia Tokens</a>
+                <a target="_blank" href="game_pdfs/proelia_tokens.pdf">Proelia Tokens</a>
               </li>
             </ul>
           </div>
