@@ -18,6 +18,10 @@ li {
   background-color: rgb(50, 50, 50);
 }
 
+.card-header {
+  min-height: 1rem;
+}
+
 .emphasis {
   font-style: italic;
 }
