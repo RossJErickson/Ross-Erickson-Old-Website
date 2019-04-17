@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astral Chaos</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Audiowide|Nunito:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/game_page.css">
+    <link rel="stylesheet" href="css/astral_chaos.css">
+
+  </head>
+  <body>
+    <div class="title">
+      <h1>Astral Chaos (v0.3)</h1>
+      <p class="emphasis">A Science Fiction Tabletop Roleplaying Game</p>
+    </div>
+    <div class="row content">
+      <div class="col-3">
+        <div class="nav flex-column nav-pills" id="category-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="fundamentals-tab" data-toggle="pill" href="#fundamentals" role="tab" aria-controls="v-pills-fundamentals" aria-selected="true">Fundamentals</a>
+          <a class="nav-link" id="shooting-tab" data-toggle="pill" href="#shooting" role="tab" aria-controls="v-pills-shooting" aria-selected="false">Shooting</a>
+          <a class="nav-link" id="cqc-tab" data-toggle="pill" href="#cqc" role="tab" aria-controls="v-pills-cqc" aria-selected="false">Close Quarters Combat</a>
+          <a class="nav-link" id="wounding-tab" data-toggle="pill" href="#wounding" role="tab" aria-controls="v-pills-wounding" aria-selected="false">Wounding</a>
+          <a class="nav-link" id="tech-tab" data-toggle="pill" href="#tech" role="tab" aria-controls="v-pills-tech" aria-selected="false">Tech</a>
+          <a class="nav-link" id="ordnance-tab" data-toggle="pill" href="#ordnance" role="tab" aria-controls="v-pills-ordnance" aria-selected="false">Ordnance</a>
+          <a class="nav-link" id="stealth-tab" data-toggle="pill" href="#stealth" role="tab" aria-controls="v-pills-stealth" aria-selected="false">Stealth</a>
+          <a class="nav-link" id="warp-tab" data-toggle="pill" href="#warp" role="tab" aria-controls="v-pills-warp" aria-selected="false">Warp</a>
+          <a class="nav-link" id="adventuring-tab" data-toggle="pill" href="#adventuring" role="tab" aria-controls="v-pills-adventuring" aria-selected="false">Adventuring</a>
+          <a class="nav-link" id="social-tab" data-toggle="pill" href="#social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social Interactions</a>
+          <a class="nav-link" id="leveling-tab" data-toggle="pill" href="#leveling" role="tab" aria-controls="v-pills-leveling" aria-selected="false">Leveling Up</a>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="tab-content" id="tabContent">
+
+          <!-- - - - - - - - - - - - Fundamentals - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade show active" id="fundamentals" role="tabpanel" aria-labelledby="fundamentals-tab">
+            <div class="accordion" id="accordion-fundamentals">
+              <div class="card">
+                <div class="card-header" id="fundamentals-characters" data-toggle="collapse" data-target="#collapse-fundamentals-characters" aria-expanded="false" aria-controls="collapse-fundamentals-characters">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Entities
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-fundamentals-characters" class="collapse" aria-labelledby="fundamentals-characters">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="fundamentals-environment" data-toggle="collapse" data-target="#collapse-fundamentals-environment" aria-expanded="false" aria-controls="collapse-fundamentals-environment">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      The Environment
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-fundamentals-environment" class="collapse" aria-labelledby="fundamentals-environment">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="fundamentals-combat-round" data-toggle="collapse" data-target="#collapse-fundamentals-combat-round" aria-expanded="false" aria-controls="collapse-fundamentals-combat-round">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      The Combat Round
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-fundamentals-combat-round" class="collapse" aria-labelledby="fundamentals-combat-round">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="fundamentals-actions" data-toggle="collapse" data-target="#collapse-fundamentals-actions" aria-expanded="false" aria-controls="collapse-fundamentals-actions">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Actions
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-fundamentals-actions" class="collapse" aria-labelledby="fundamentals-actions">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Shooting - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="shooting" role="tabpanel" aria-labelledby="shooting-tab">
+            <div class="accordion" id="accordion-shooting">
+              <div class="card">
+                <div class="card-header" id="shooting-action" data-toggle="collapse" data-target="#collapse-shooting-action" aria-expanded="false" aria-controls="collapse-shooting-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Shooting a Gun
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-shooting-action" class="collapse" aria-labelledby="shooting-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="shooting-modifiers" data-toggle="collapse" data-target="#collapse-shooting-modifiers" aria-expanded="false" aria-controls="collapse-shooting-modifiers">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Modifiers to Hit
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-shooting-modifiers" class="collapse" aria-labelledby="shooting-modifiers">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="shooting-equipment" data-toggle="collapse" data-target="#collapse-shooting-equipment" aria-expanded="false" aria-controls="collapse-shooting-equipment">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Ranged Weapons
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-shooting-equipment" class="collapse" aria-labelledby="shooting-equipment">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - CQC - - - - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="cqc" role="tabpanel" aria-labelledby="cqc-tab">
+            <div class="accordion" id="accordion-cqc">
+              <div class="card">
+                <div class="card-header" id="cqc-action" data-toggle="collapse" data-target="#collapse-cqc-action" aria-expanded="false" aria-controls="collapse-cqc-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Making a Move in CQC
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-cqc-action" class="collapse" aria-labelledby="cqc-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="cqc-types" data-toggle="collapse" data-target="#collapse-cqc-types" aria-expanded="false" aria-controls="collapse-cqc-types">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Types of CQC Actions
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-cqc-types" class="collapse" aria-labelledby="cqc-types">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="cqc-equipment" data-toggle="collapse" data-target="#collapse-cqc-equipment" aria-expanded="false" aria-controls="collapse-cqc-equipment">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      CQC Weapons
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-cqc-equipment" class="collapse" aria-labelledby="cqc-equipment">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Wounding - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="wounding" role="tabpanel" aria-labelledby="wounding-tab">
+            <div class="accordion" id="accordion-wounding">
+              <div class="card">
+                <div class="card-header" id="wounding-damage" data-toggle="collapse" data-target="#collapse-wounding-damage" aria-expanded="false" aria-controls="collapse-wounding-damage">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Dealing Damage
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-wounding-damage" class="collapse" aria-labelledby="wounding-damage">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="wounding-conditions" data-toggle="collapse" data-target="#collapse-wounding-conditions" aria-expanded="false" aria-controls="collapse-wounding-conditions">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Conditions
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-wounding-conditions" class="collapse" aria-labelledby="wounding-conditions">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="wounding-armor" data-toggle="collapse" data-target="#collapse-wounding-armor" aria-expanded="false" aria-controls="collapse-wounding-armor">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Armor
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-wounding-armor" class="collapse" aria-labelledby="wounding-armor">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Tech - - - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
+            <div class="accordion" id="accordion-tech">
+              <div class="card">
+                <div class="card-header" id="tech-action" data-toggle="collapse" data-target="#collapse-tech-action" aria-expanded="false" aria-controls="collapse-tech-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Using a Tech Device
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-tech-action" class="collapse" aria-labelledby="tech-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="tech-equipment" data-toggle="collapse" data-target="#collapse-tech-equipment" aria-expanded="false" aria-controls="collapse-tech-equipment">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Tech Devices
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-tech-equipment" class="collapse" aria-labelledby="tech-equipment">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Ordnance - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="ordnance" role="tabpanel" aria-labelledby="ordnance-tab">
+            <div class="accordion" id="accordion-ordnance">
+              <div class="card">
+                <div class="card-header" id="ordnance-action" data-toggle="collapse" data-target="#collapse-ordnance-action" aria-expanded="false" aria-controls="collapse-ordnance-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Using Explosive Ordance
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-ordnance-action" class="collapse" aria-labelledby="ordnance-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="ordnance-equipment" data-toggle="collapse" data-target="#collapse-ordnance-equipment" aria-expanded="false" aria-controls="collapse-ordnance-equipment">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Explosive Ordnance
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-ordnance-equipment" class="collapse" aria-labelledby="ordnance-equipment">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Stealth - - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="stealth" role="tabpanel" aria-labelledby="stealth-tab">
+            <div class="accordion" id="accordion-stealth">
+              <div class="card">
+                <div class="card-header" id="stealth-action" data-toggle="collapse" data-target="#collapse-stealth-action" aria-expanded="false" aria-controls="collapse-stealth-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Being Stealthy
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-stealth-action" class="collapse" aria-labelledby="stealth-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="stealth-modifiers" data-toggle="collapse" data-target="#collapse-stealth-modifiers" aria-expanded="false" aria-controls="collapse-stealth-modifiers">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Modifiers to be Seen or Heard
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-stealth-modifiers" class="collapse" aria-labelledby="stealth-modifiers">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Warp - - - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="warp" role="tabpanel" aria-labelledby="warp-tab">
+            <div class="accordion" id="accordion-warp">
+              <div class="card">
+                <div class="card-header" id="warp-action" data-toggle="collapse" data-target="#collapse-warp-action" aria-expanded="false" aria-controls="collapse-warp-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Manipulating through the Warp
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-warp-action" class="collapse" aria-labelledby="warp-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="warp-state" data-toggle="collapse" data-target="#collapse-warp-state" aria-expanded="false" aria-controls="collapse-warp-state">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      The State of the Warp
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-warp-state" class="collapse" aria-labelledby="warp-state">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="warp-manipulations" data-toggle="collapse" data-target="#collapse-warp-manipulations" aria-expanded="false" aria-controls="collapse-warp-manipulations">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Warp Manipulations
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-warp-manipulations" class="collapse" aria-labelledby="warp-manipulations">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Adventuring - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="adventuring" role="tabpanel" aria-labelledby="adventuring-tab">
+            <div class="accordion" id="accordion-adventuring">
+              <div class="card">
+                <div class="card-header" id="adventuring-climbing" data-toggle="collapse" data-target="#collapse-adventuring-climbing" aria-expanded="false" aria-controls="collapse-adventuring-climbing">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Climbing
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-adventuring-climbing" class="collapse" aria-labelledby="adventuring-climbing">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="adventuring-balancing" data-toggle="collapse" data-target="#collapse-adventuring-balancing" aria-expanded="false" aria-controls="collapse-adventuring-balancing">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Balancing
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-adventuring-balancing" class="collapse" aria-labelledby="adventuring-balancing">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="adventuring-miscellaneous" data-toggle="collapse" data-target="#collapse-adventuring-miscellaneous" aria-expanded="false" aria-controls="collapse-adventuring-miscellaneous">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Miscellaneous
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-adventuring-miscellaneous" class="collapse" aria-labelledby="adventuring-miscellaneous">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Social Interactions - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
+            <div class="accordion" id="accordion-social">
+              <div class="card">
+                <div class="card-header" id="social-action" data-toggle="collapse" data-target="#collapse-social-action" aria-expanded="false" aria-controls="collapse-social-action">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Social Interactions with NPCs
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-social-action" class="collapse" aria-labelledby="social-action">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="social-types" data-toggle="collapse" data-target="#collapse-social-types" aria-expanded="false" aria-controls="collapse-social-types">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Social Action Types
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-social-types" class="collapse" aria-labelledby="social-types">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="social-impressions" data-toggle="collapse" data-target="#collapse-social-impressions" aria-expanded="false" aria-controls="collapse-social-impressions">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      NPC Impressions
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-social-impressions" class="collapse" aria-labelledby="social-impressions">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Leveling Up - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="leveling" role="tabpanel" aria-labelledby="leveling-tab">
+            <div class="accordion" id="accordion-leveling">
+              <div class="card">
+                <div class="card-header" id="leveling-guide" data-toggle="collapse" data-target="#collapse-leveling-guide" aria-expanded="false" aria-controls="collapse-leveling-guide">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Leveling Up
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-leveling-guide" class="collapse" aria-labelledby="leveling-guide">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="leveling-attributes" data-toggle="collapse" data-target="#collapse-leveling-attributes" aria-expanded="false" aria-controls="collapse-leveling-attributes">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Attributes
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-leveling-attributes" class="collapse" aria-labelledby="leveling-attributes">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="leveling-paths" data-toggle="collapse" data-target="#collapse-leveling-paths" aria-expanded="false" aria-controls="collapse-leveling-paths">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Paths
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-leveling-paths" class="collapse" aria-labelledby="leveling-paths">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="leveling-arts" data-toggle="collapse" data-target="#collapse-leveling-arts" aria-expanded="false" aria-controls="collapse-leveling-arts">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Arts of Combat
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-leveling-arts" class="collapse" aria-labelledby="leveling-arts">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="leveling-maneuvers" data-toggle="collapse" data-target="#collapse-leveling-maneuvers" aria-expanded="false" aria-controls="collapse-leveling-maneuvers">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Squad Maneuvers
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-leveling-maneuvers" class="collapse" aria-labelledby="leveling-maneuvers">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

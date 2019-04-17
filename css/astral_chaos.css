@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(10, 20, 50);
+}
+
+h1 {
+  font-family: 'Audiowide', monotype;
+}
+
+ol {
+  list-style: decimal;
+}
+
+.card-body {
+  background-color: rgb(125, 155, 195);
+  color: black;
+}
+
+.card-header {
+  background-color: rgb(20, 20, 20);
+}
+
+.card-header .btn-link {
+  color: white;
+  font-family: 'Bitter', serif;
+}
+
+.content {
+  height: 100%;
+}
+
+.nav-link {
+  background-color: rgb(60, 150, 235);
+  background-color: rgb(125, 155, 195);
+  color: black;
+}
+
+.tab-content {
+  background-color: rgba(125, 155, 195, 0);
+}
