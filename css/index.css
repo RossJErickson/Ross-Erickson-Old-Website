@@ -99,6 +99,7 @@ h2 {
 
 .upper-left-arm {
   clip-path: polygon(-10% 113%, -10% -10%, 113% -10%);
+  -webkit-clip-path: polygon(-10% 113%, -10% -10%, 113% -10%);
   left: calc(50% - calc(.7 * 50vmin) - 2vmin);
   text-align: left;
   top: calc(50% - calc(.7 * 50vmin) - 2vmin);
@@ -115,6 +116,7 @@ h2 {
 
 .upper-right-arm {
   clip-path: polygon(110% 113%, -13% -10%, 110% -10%);
+  -webkit-clip-path: polygon(110% 113%, -13% -10%, 110% -10%);
   left: calc(50% + 2vmin);
   text-align: right;
   top: calc(50% - calc(.7 * 50vmin) - 2vmin);
@@ -131,6 +133,7 @@ h2 {
 
 .lower-right-arm {
   clip-path: polygon(110% 110%, -13% 110%, 110% -13%);
+  -webkit-clip-path: polygon(110% 110%, -13% 110%, 110% -13%);
   left: calc(50% + 2vmin);
   text-align: right;
   top: calc(50% + 2vmin);
@@ -147,6 +150,7 @@ h2 {
 
 .lower-left-arm {
   clip-path: polygon(113% 110%, -10% 110%, -10% -13%);
+  -webkit-clip-path: polygon(113% 110%, -10% 110%, -10% -13%);
   left: calc(50% - calc(.7 * 50vmin) - 2vmin);
   text-align: left;
   top: calc(50% + 2vmin);
