@@ -14,7 +14,10 @@ $(".arm").hover(function() {
 );
 
 $(document).click(function(){
-  edgeShift($(".clicked"));
+  clickedElement = $(".clicked");
+  if(clickedElement.length != 0) {
+    edgeShift(clickedElement);
+  }
 });
 
 
@@ -28,6 +31,15 @@ function displaySubpage(target) {
   target.removeClass("hideaway");
   target.addClass("visible");
   target.removeClass("invisible", 300);
+  fixSafariSubpage(target.children(0));
+}
+
+function fixSafariSubpage(target) {
+  target.width(target.width()-100);
+  setTimeout(function() {
+    target.removeAttr("style");
+  }, 10
+  );
 }
 
 function hideSubpage(target, callbackFunction) {
@@ -53,8 +65,8 @@ function edgeShift(target) {
     targetClass = "lower-left-arm";
   }
   if (!target.hasClass(targetClass + "-clicked")) {
-    target.addClass("clicked");
     target.addClass(targetClass + "-clicked", 300, function() {
+      target.addClass("clicked");
       displaySubpage( $("#" + target.attr("data-subpage")) );
       }
     );

@@ -34,7 +34,7 @@ h2 {
 
 .mobile-disclaimer {
   color: black;
-  font-size: 9px;
+  font-size: 1rem;
   font-style: italic;
   left: 1rem;
   position: fixed;
@@ -175,7 +175,8 @@ h2 {
 }
 
 .subpage {
-  border: 10px solid rgb(255, 255, 255, .5);
+  border: 10px solid rgb(215, 225, 255);
+  border: 10px solid rgba(255, 255, 255, .5);
   height: calc(100% - 20vmin - 20px);
   left: 10vmin;
   position: absolute;
