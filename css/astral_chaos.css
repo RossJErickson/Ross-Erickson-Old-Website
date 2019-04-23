@@ -34,6 +34,16 @@ ol {
   color: black;
 }
 
-.tab-content {
-  background-color: rgba(125, 155, 195, 0);
+.ranged-weapon-component {
+  table-layout: fixed;
+  width: 60%;
+}
+
+.ranged-weapon-cartridges {
+  width: 100%;
+}
+
+.table-subhead {
+  background-color: black;
+  color: rgb(125, 155, 195);
 }
