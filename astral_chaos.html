@@ -33,6 +33,7 @@
           <a class="nav-link" id="warp-tab" data-toggle="pill" href="#warp" role="tab" aria-controls="v-pills-warp" aria-selected="false">Warp</a>
           <a class="nav-link" id="adventuring-tab" data-toggle="pill" href="#adventuring" role="tab" aria-controls="v-pills-adventuring" aria-selected="false">Adventuring</a>
           <a class="nav-link" id="social-tab" data-toggle="pill" href="#social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social Interactions</a>
+          <a class="nav-link" id="inventory-tab" data-toggle="pill" href="#inventory" role="tab" aria-controls="v-pills-inventory" aria-selected="false">Inventory</a>
           <a class="nav-link" id="leveling-tab" data-toggle="pill" href="#leveling" role="tab" aria-controls="v-pills-leveling" aria-selected="false">Leveling Up</a>
         </div>
       </div>
@@ -44,14 +45,14 @@
           <div class="tab-pane fade show active" id="fundamentals" role="tabpanel" aria-labelledby="fundamentals-tab">
             <div class="accordion" id="accordion-fundamentals">
               <div class="card">
-                <div class="card-header" id="fundamentals-characters" data-toggle="collapse" data-target="#collapse-fundamentals-characters" aria-expanded="false" aria-controls="collapse-fundamentals-characters">
+                <div class="card-header" id="fundamentals-entities" data-toggle="collapse" data-target="#collapse-fundamentals-entities" aria-expanded="false" aria-controls="collapse-fundamentals-entities">
                   <h2 class="mb-0">
                     <button class="btn btn-link">
                       Entities
                     </button>
                   </h2>
                 </div>
-                <div id="collapse-fundamentals-characters" class="collapse" aria-labelledby="fundamentals-characters">
+                <div id="collapse-fundamentals-entities" class="collapse" aria-labelledby="fundamentals-entities">
                   <div class="card-body">
                     <ul>
                       <li>
@@ -59,7 +60,24 @@
                         <ul><li>*For standard human-sized characters, including the ones that players are intended to control. NPCs and non-standard PCs may be different sizes at the GM's discretion.</li></ul>
                       </li>
                       <li>
-                        Objects within the environment can be represented by various shapes depending on the object, but will still have a complete border defining the object's location, shape, and size.
+                        Objects within the environment can be represented by various shapes depending on the object, but will still have a complete border defining the object's location, shape, and size. Objects generally fall into five categories:
+                        <ul>
+                          <li>
+                            Large: these objects are large enough to act as ledges (see 'the environment' subsection).
+                          </li>
+                          <li>
+                            Cover: these objects are shorter than shoulder height, allowing for characters to see, shoot, and move over them. Any move that entails moving onto or over such cover costs an additional 1ap. Alternatively, cover may be a large object with gaps in it, allowing lines of effect to pass through it but prohibiting characters from moving through it.
+                          </li>
+                          <li>
+                            Obscuring: these are objects such as plants or fog. Lines of effect passing through them are not blocked, but do count as obscured.
+                          </li>
+                          <li>
+                            Terrain: these objects are not truly objects so much as patches of ground that hinder movement, such as rubble or shallow water. When characters move through terrain, each unit of distance moved counts as moving twice that far instead.
+                          </li>
+                          <li>
+                            Special: these objects have unique rules set by the GM. They are such things as coolant tubes or electrified water.
+                          </li>
+                        </ul>
                       </li>
                       <li>
                         Items may not be large enough to warrant showing with a border. Instead, they are marked with an icon at their location. This icon does not interact with game rules in any way, unlike objects and their borders.
@@ -83,10 +101,13 @@
                         The map is a blank area representing where the game takes place--the map is where the game entities are placed.
                       </li>
                       <li>
-                        Walls are represented by a line, and prohibit anything from passing through them.
+                        Walls are represented by a line, and block lines of effect.
                       </li>
                       <li>
-                        Ledges are represented by a line marked in some way to denote that it is a ledge. Characters on the lower side of the ledge can only see or shoot one unit past the ledge. Charaters on the higher side of the ledge can only see or shoot past the ledge if they are within one unit of it. Exceptions may be made at the GM's discretion if the ledge is short enough relative to the viewing distance of the characters.
+                        Ledges are represented by a line marked in some way to denote that it is a ledge. Lines of effect originating on the lower side of the ledge are blocked if they extend more than 1u beyond the ledge. Lines of effect originating on the higher side of the ledge are blocked unless they originate within one unit of the ledge. Exceptions may be made at the GM's discretion if the ledge is short enough relative to the viewing distance of the characters.
+                      </li>
+                      <li>
+                        Steps are ledges that are shoulder-height or less. Steps act as cover for characters on the lower side who are within 1u of the step.
                       </li>
                     </ul>
                   </div>
@@ -108,7 +129,7 @@
                         <ul><li>In certain situations where NPCs should act first (for example, if the PCs are being ambushed), simply allow the relevant NPCs to take their turns before the first round begins.</li></ul>
                       </li>
                       <li>
-                        When the PCs take their turns, each PC gets four action points to use that round. Action points are spent to perform actions, with a cost that varies per action. If a PC does not have enough action points remaining for an action, that action may not be performed. Each PC must use all of their action points each round.
+                        When the PCs take their turns, each PC is allowed to perform actions as they wish. PCs each get four action points to use during the round. Action points are spent to perform actions, with a cost that varies per action. If a PC does not have enough action points remaining for an action, that action may not be performed. Each PC must use all of their action points each round.
                       </li>
                       <li>
                         PCs may spend their action points in any arrangement--any given PC does not need to spend all their action points before another PC can act. Furthermore, actions may be taken simultaneously, such as shooting a gun half-way through a move action. Actions of different PCs may also be taken simultaneously, such as a heavily armored character shielding a wounded character as they move to cover.
@@ -142,10 +163,10 @@
                         CQC Action, 2ap -- The character may make a CQC attack or defense.
                       </li>
                       <li>
-                        Move, 1ap -- The character may move 2u. If the character is aiming or ducking, they may only move 1u.
+                        Move, 1ap -- The character may move 2u on the map. If the character is aiming or ducking, they may only move 1u.
                       </li>
                       <li>
-                        Run, 4ap -- The character may move 12u. The character ceases aiming or ducking if they take the run action.
+                        Run, 4ap -- The character may move 12u on the map. The character ceases aiming or ducking if they take the run action.
                       </li>
                       <li>
                         Act, 2a -- The character may make a basic act, such as picking an item up or opening a door.
@@ -185,10 +206,14 @@
                         Units are the unit measurement of the game. Whether you use inches, centimeters, or any other length is up to you - but when the rules refer to a "unit", it is referring to the same arbitrary but constant length. One unit is meant to represent approximately one meter in the game world.
                       </li>
                       <li>
+                        Line of Effect: A line of effect is an imaginary and straight line drawn across the map that represents the path of a character's movement, shot from a gun, line of sight, thrown ordnance, etc. It is drawn from the source to the target.
+                        <ul><li>Note, a character's path of movement is a special case and doesn't need to have a straight line of effect.</li></ul>
+                      </li>
+                      <li>
                         Nearest Edges: When measuring between two entities, measure from the edge of each entity that is nearest the other entity.
                       </li>
                       <li>
-                        Close Enough: When measuring, since a non-discretized system is used in this game, measurements may end up being causing debate. If a measurement is ever unclear as to whether it is close enough, then assume it is indeed close enough.
+                        Close Enough: When measuring, since a non-discretized system is used in this game, measurements may end up causing debate. If a measurement is ever unclear as to whether it is close enough, then assume it is indeed close enough.
                       </li>
                     </ul>
                   </div>
@@ -278,7 +303,24 @@
                 </div>
                 <div id="collapse-shooting-action" class="collapse" aria-labelledby="shooting-action">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        When a character performs the shoot action, they may shoot at any one character (the target) to whom they could draw an unblocked line of effect.
+                      </li>
+                      <li>
+                        When a character shoots at a target, they roll a number of twelve-sided dice equal to the shots stat of their ranged weapon. For each roll that is equal to or above the shot difficulty, the shot hits. The shot difficulty is equal to the sum of all the modifiers to hit that would apply (see 'modifiers to hit' subsection). To determine the results of the hits, see the wounding section.
+                        <ul><li>Note, this means that if no modifiers to hit would apply, your shots automatically hit. This game assumes that your character has been trained to some degree and will not miss given optimal conditions.</li></ul>
+                      </li>
+                      <li>
+                        At any given time, your ranged weapon may only have as many shots loaded as its load size stat. Keep track of how many shots your ranged weapon has loaded at any given point. For each shot you fire, you must subtract one shot from the number of shots your ranged weapon has loaded. If you cannot, then your shooting action immediately ends.
+                      </li>
+                      <li>
+                        Performing the reload action brings the amount of shots your ranged weapon has loaded back to its maximum value.
+                      </li>
+                      <li>
+                        You cannot shoot at a target that is over three times the upper optimum range of the ranged weapon you are using. This value is considered to be the ranged weapon's maximum effective range.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -292,7 +334,34 @@
                 </div>
                 <div id="collapse-shooting-modifiers" class="collapse" aria-labelledby="shooting-modifiers">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        <span class="emphasis">Modifier, Amount/Effect -- Description of when to apply
+                      </li>
+                      <li>
+                        Cover, +6 -- if a line of effect can be drawn from the shooting character to the target that is blocked or goes through cover. Cover within 1u of the shooting character does not count, as they are presumably shooting over it.
+                      </li>
+                      <li>
+                        Ducking, +4 -- if the target is ducking
+                      </li>
+                      <li>
+                        Reaction Shot, +3 -- if the shooting is performed as a reaction
+                      </li>
+                      <li>
+                        Suppressed, +3 -- If a character was shot at since their last turn, and that shooting was done from within the optimum range of the ranged weapon that was used.
+                      </li>
+                      <li>
+                        Outside Optimum Range, dAdv -- If the target is at a distance that lies outside of the optimum range of the weapon being used
+                      </li>
+                      <li>
+                        Obscured Target, dAdv -- If an obscured line of effect can be drawn from the shooting character to the target.
+                      </li>
+                      <li>
+                        Snap Shot, varies -- if the shooter is not aiming; the modifier is equal to the size of the weapon being used
+                      </li>
+                      <li>
+                        Weapon Size, varies -- This modifier is always in effect. The modifier is equal to the size of the weapon being used, or half that if the weapon is being used with two hands.
+                      </li>
                   </div>
                 </div>
               </div>
@@ -306,7 +375,222 @@
                 </div>
                 <div id="collapse-shooting-equipment" class="collapse" aria-labelledby="shooting-equipment">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        Ranged weapons consist of a barrel, caliber, mechanism, loader, and cartridge. Each of these components will give the ranged weapon its stats.
+                      </li>
+                      <li>
+                        A ranged weapon has the following stats associated with it: optimum range (lower and upper limit), damage, shots, and load size, and size. The components comprising the ranged weapon determine its stats.
+                      </li>
+                      <li>
+                        A ranged weapon has a size of 0 by default, which is then increased based on the components it has. Ranged weapons are may not exceed a size of 7. The size of the ranged weapon determines its lower optimum range as follows:
+                        <ul>
+                          <li>Size 0-3: 0u</li>
+                          <li>Size 4-5: 4u</li>
+                          <li>Size 6-7: 8u</li>
+                        </ul>
+                      </li>
+                      <li>
+                        The GM decides the name of the ranged weapon based on its components.
+                      </li>
+                      <li>
+                        Example: If a ranged weapon has a long barrel, high caliber, trigger mechanism, and clip loader, with photon cartridges, the GM might call it a "Photon Sniper Rifle" and it would have the following stats:
+                        <ul>
+                          <li>Optimum Range: 8-36</li>
+                          <li>Damage: 4</li>
+                          <li>Shots: 2</li>
+                          <li>Load Size: 6 (2ap to reload or unload, cannot be reloaded unless no shots remain loaded)</li>
+                          <li>Photon: Suppression caused by this weapon gives not only +3 to shot difficulty rolls, but also dAdv.</li>
+                          <li>Size: 6</li>
+                        </ul>
+                    </ul>
+                    <table id="ranged-weapon-barrels" class="ranged-weapon-component">
+                      <thead>
+                        <tr>
+                          <th>Barrels</th>
+                          <th>Type</th>
+                          <th>Upper Optimum Range</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="4"></td>
+                          <td>Long</td>
+                          <td>36u</td>
+                          <td>+3</td>
+                        </tr>
+                        <tr>
+                          <td>Middle</td>
+                          <td>20u</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Short</td>
+                          <td>12u</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>Snub</td>
+                          <td>8u</td>
+                          <td>+0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="ranged-weapon-calibers"class="ranged-weapon-component">
+                      <thead>
+                        <tr>
+                          <th>Caliber</th>
+                          <th>Type</th>
+                          <th>Damage</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3"></td>
+                          <td>High</td>
+                          <td>4 damage</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Middle</td>
+                          <td>2 damage</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>Low</td>
+                          <td>1 damage</td>
+                          <td>+0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="ranged-weapon-mechanisms"class="ranged-weapon-component">
+                      <thead>
+                        <tr>
+                          <th>Mechanism</th>
+                          <th>Type</th>
+                          <th>Shots</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="4"></td>
+                          <td>Repeater</td>
+                          <td>6 shots</td>
+                          <td>+3</td>
+                        </tr>
+                        <tr>
+                          <td>Cycler</td>
+                          <td>4 shots</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Trigger</td>
+                          <td>2 shots</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>Action</td>
+                          <td>1 shot</td>
+                          <td>+0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="ranged-weapon-loaders"class="ranged-weapon-component">
+                      <thead>
+                        <tr>
+                          <th>Loader</th>
+                          <th>Type</th>
+                          <th>Load Size,<br>Reload Rules</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="4"></td>
+                          <td>Drum</td>
+                          <td>10x shots stat,<br>8ap to reload</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Magazine</td>
+                          <td>5x shots stat,<br>4ap to reload</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>Clip</td>
+                          <td>3x shots stat,<br>2ap to reload or unload*</td>
+                          <td>+0</td>
+                        </tr>
+                        <tr>
+                          <td>Hand-Loaded</td>
+                          <td>3x shots stat,<br>1ap to reload**</td>
+                          <td>+0</td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">
+                            *Cannot be reloaded unless no shots remain loaded<br>
+                            **Reloads one shot per reload action
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="ranged-weapon-cartridges"class="ranged-weapon-component ranged-weapon-cartridges">
+                      <thead>
+                        <tr>
+                          <th>Cartridges</th>
+                          <th>Type</th>
+                          <th>Effect</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="9"></td>
+                          <td>Slug</td>
+                          <td colspan="2">Rolls of "No Wound" instead count as a flesh wound.</td>
+                        </tr>
+                        <tr>
+                          <td>Rail</td>
+                          <td colspan="2">
+                            -You may only take the "shoot" action once per turn.<br>
+                            -Short barreled guns get +3 to their upper optimum range and +1 damage.<br>
+                            -Middle barreled guns get +7 to their upper optimum range and +2 damage.<br>
+                            -Long barreled guns get +18 to their upper optimum range and +3 damage.<br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Scattershot</td>
+                          <td colspan="2">Firing beyond gives dAdv on the wounding roll instead of the hit roll.</td>
+                        </tr>
+                        <tr>
+                          <td>Photon</td>
+                          <td colspan="2">Suppression caused by this weapon gives not only +3 to shot difficulty rolls, but also dAdv.</td>
+                        </tr>
+                        <tr>
+                          <td>Phaser Bolt</td>
+                          <td colspan="2">This gun has no maximum range.</td>
+                        </tr>
+                        <tr>
+                          <td>Impulse</td>
+                          <td colspan="2">-Grievous wounds caused by this weapon instead count as flesh wounds.<br>-Ap spent towards reloading may also be spent towards another action.</td>
+                        </tr>
+                        <tr>
+                          <td>Concussion</td>
+                          <td colspan="2">When firing beyond optimum range, shooting takes 4ap but doesn't give dAdv.</td>
+                        </tr>
+                        <tr>
+                          <td>Shell Plasma</td>
+                          <td colspan="2">Flesh wounds caused by this weapon instead count as grievous wounds.</td>
+                        </tr>
+                        <tr>
+                          <td>EMCF Plasma</td>
+                          <td colspan="2">This weapon cannot fire beyond its optimum range, but always deals double-wounds.</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -655,6 +939,55 @@
                   </h2>
                 </div>
                 <div id="collapse-social-impressions" class="collapse" aria-labelledby="social-impressions">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- - - - - - - - - - - - Inventory - - - - - - - - - - - - - - - -->
+
+          <div class="tab-pane fade" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+            <div class="accordion" id="accordion-inventory">
+              <div class="card">
+                <div class="card-header" id="inventory-classification" data-toggle="collapse" data-target="#collapse-inventory-classification" aria-expanded="false" aria-controls="collapse-inventory-classification">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Classification
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-inventory-classification" class="collapse" aria-labelledby="inventory-classification">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="inventory-carrying" data-toggle="collapse" data-target="#collapse-inventory-carrying" aria-expanded="false" aria-controls="collapse-inventory-carrying">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Carrying Equipment
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-inventory-carrying" class="collapse" aria-labelledby="inventory-carrying">
+                  <div class="card-body">
+                    placeholder text
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="inventory-encumbrance" data-toggle="collapse" data-target="#collapse-inventory-encumbrance" aria-expanded="false" aria-controls="collapse-inventory-encumbrance">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link">
+                      Encumbrance
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse-inventory-encumbrance" class="collapse" aria-labelledby="inventory-encumbrance">
                   <div class="card-body">
                     placeholder text
                   </div>
