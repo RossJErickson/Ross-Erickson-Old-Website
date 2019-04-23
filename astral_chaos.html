@@ -19,23 +19,23 @@
     <div class="title">
       <h1>Astral Chaos (v0.3)</h1>
       <p class="emphasis">A Science Fiction Tabletop Roleplaying Game</p>
-      <p class="emphasis">(work in progress due to v0.3 being in development)</p>
+      <p class="emphasis">(work in progress due to v0.3 being in development - categories that are greyed out do not yet have content other than subsection headings)</p>
     </div>
     <div class="row content">
       <div class="col-3">
         <div class="nav flex-column nav-pills" id="category-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active" id="fundamentals-tab" data-toggle="pill" href="#fundamentals" role="tab" aria-controls="v-pills-fundamentals" aria-selected="true">Fundamentals</a>
           <a class="nav-link" id="shooting-tab" data-toggle="pill" href="#shooting" role="tab" aria-controls="v-pills-shooting" aria-selected="false">Shooting</a>
-          <a class="nav-link disabled" id="cqc-tab" data-toggle="pill" href="#cqc" role="tab" aria-controls="v-pills-cqc" aria-selected="false">Close Quarters Combat (CQC)</a>
-          <a class="nav-link disabled" id="wounding-tab" data-toggle="pill" href="#wounding" role="tab" aria-controls="v-pills-wounding" aria-selected="false">Wounding</a>
-          <a class="nav-link disabled" id="tech-tab" data-toggle="pill" href="#tech" role="tab" aria-controls="v-pills-tech" aria-selected="false">Tech</a>
-          <a class="nav-link disabled" id="ordnance-tab" data-toggle="pill" href="#ordnance" role="tab" aria-controls="v-pills-ordnance" aria-selected="false">Ordnance</a>
-          <a class="nav-link disabled" id="stealth-tab" data-toggle="pill" href="#stealth" role="tab" aria-controls="v-pills-stealth" aria-selected="false">Stealth</a>
-          <a class="nav-link disabled" id="warp-tab" data-toggle="pill" href="#warp" role="tab" aria-controls="v-pills-warp" aria-selected="false">Warp</a>
-          <a class="nav-link disabled" id="adventuring-tab" data-toggle="pill" href="#adventuring" role="tab" aria-controls="v-pills-adventuring" aria-selected="false">Adventuring</a>
-          <a class="nav-link disabled" id="social-tab" data-toggle="pill" href="#social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social Interactions</a>
-          <a class="nav-link disabled" id="inventory-tab" data-toggle="pill" href="#inventory" role="tab" aria-controls="v-pills-inventory" aria-selected="false">Inventory</a>
-          <a class="nav-link disabled" id="leveling-tab" data-toggle="pill" href="#leveling" role="tab" aria-controls="v-pills-leveling" aria-selected="false">Leveling Up</a>
+          <a class="nav-link" id="cqc-tab" data-toggle="pill" href="#cqc" role="tab" aria-controls="v-pills-cqc" aria-selected="false"><span class="grey">Close Quarters Combat (CQC)</span></a>
+          <a class="nav-link" id="wounding-tab" data-toggle="pill" href="#wounding" role="tab" aria-controls="v-pills-wounding" aria-selected="false">Wounding</a>
+          <a class="nav-link" id="tech-tab" data-toggle="pill" href="#tech" role="tab" aria-controls="v-pills-tech" aria-selected="false"><span class="grey">Tech</span></a>
+          <a class="nav-link" id="ordnance-tab" data-toggle="pill" href="#ordnance" role="tab" aria-controls="v-pills-ordnance" aria-selected="false"><span class="grey">Ordnance</span></a>
+          <a class="nav-link" id="stealth-tab" data-toggle="pill" href="#stealth" role="tab" aria-controls="v-pills-stealth" aria-selected="false"><span class="grey">Stealth</span></a>
+          <a class="nav-link" id="warp-tab" data-toggle="pill" href="#warp" role="tab" aria-controls="v-pills-warp" aria-selected="false"><span class="grey">Warp</span></a>
+          <a class="nav-link" id="adventuring-tab" data-toggle="pill" href="#adventuring" role="tab" aria-controls="v-pills-adventuring" aria-selected="false"><span class="grey">Adventuring</span></a>
+          <a class="nav-link" id="social-tab" data-toggle="pill" href="#social" role="tab" aria-controls="v-pills-social" aria-selected="false"><span class="grey">Social Interactions</span></a>
+          <a class="nav-link" id="inventory-tab" data-toggle="pill" href="#inventory" role="tab" aria-controls="v-pills-inventory" aria-selected="false"><span class="grey">Inventory</span></a>
+          <a class="nav-link" id="leveling-tab" data-toggle="pill" href="#leveling" role="tab" aria-controls="v-pills-leveling" aria-selected="false"><span class="grey">Leveling Up</span></a>
         </div>
       </div>
       <div class="col-9">
@@ -306,7 +306,7 @@
                   <div class="card-body">
                     <ul>
                       <li>
-                        When a character performs the shoot action, they may shoot at any one character (the target) to whom they could draw an unblocked line of effect.
+                        When a character performs the shoot action, they may shoot at any one character (the target) to whom they could draw an unblocked line of effect. Shooting is considered an attack.
                       </li>
                       <li>
                         When a character shoots at a target, they roll a number of twelve-sided dice equal to the shots stat of their ranged weapon. For each roll that is equal to or above the shot difficulty, the shot hits. The shot difficulty is equal to the sum of all the modifiers to hit that would apply (see 'modifiers to hit' subsection). To determine the results of the hits, see the wounding section.
@@ -405,7 +405,7 @@
                           <li>Size: 6</li>
                         </ul>
                     </ul>
-                    <table id="ranged-weapon-barrels" class="ranged-weapon-component">
+                    <table id="ranged-weapon-barrels" class="basic-table">
                       <thead>
                         <tr>
                           <th>Barrels</th>
@@ -438,7 +438,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table id="ranged-weapon-calibers"class="ranged-weapon-component">
+                    <table id="ranged-weapon-calibers"class="basic-table">
                       <thead>
                         <tr>
                           <th>Caliber</th>
@@ -466,7 +466,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table id="ranged-weapon-mechanisms"class="ranged-weapon-component">
+                    <table id="ranged-weapon-mechanisms"class="basic-table">
                       <thead>
                         <tr>
                           <th>Mechanism</th>
@@ -499,7 +499,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table id="ranged-weapon-loaders"class="ranged-weapon-component">
+                    <table id="ranged-weapon-loaders"class="basic-table">
                       <thead>
                         <tr>
                           <th>Loader</th>
@@ -538,7 +538,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table id="ranged-weapon-cartridges"class="ranged-weapon-component ranged-weapon-cartridges">
+                    <table id="ranged-weapon-cartridges"class="basic-table ranged-weapon-cartridges">
                       <thead>
                         <tr>
                           <th>Cartridges</th>
@@ -661,7 +661,42 @@
                 </div>
                 <div id="collapse-wounding-damage" class="collapse" aria-labelledby="wounding-damage">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        When a character hits with an attack, roll a d12 and a d4. The damage dealt by the action is equal to the result of the d12 plus the damage associated with each hit in the attack. The d4 determines the location that was hit based on the chart below. The target acquires "no wound", a "flesh wound", or a "grievous wound" in the designated location based on the total damage dealt to them and the armor they are wearing in that location (see armor subsection).
+                        <ul>
+                          <li>
+                            4: Head
+                          </li>
+                          <li>
+                            3: Torso
+                          </li>
+                          <li>
+                            2: Arms
+                          </li>
+                          <li>
+                            1: Legs
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Wound Types
+                        <ul>
+                          <li>
+                            Grievous Wound: Grievous wounds count as a wound that cannot be removed by battlefield medicine. Since healing between fights is generally not applicable to NPCs, grievous wounds dealt by PCs count as double flesh wounds instead. The GM may override this rule for special-case NPCs if desired.
+                          </li>
+                          <li>
+                            Flesh Wound: Flesh wounds are the standard form of being wounded and have no additional rules.
+                          </li>
+                          <li>
+                            No Wound: A result of no wound means the character does not acquire any wound.
+                          </li>
+                          <li>
+                            Double Wound: Sometimes, an attack has a rule that says it causes a "double wound". This means that when a target acquires a wound from such a source, that target instead acquires two wounds of that type.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -675,7 +710,67 @@
                 </div>
                 <div id="collapse-wounding-conditions" class="collapse" aria-labelledby="wounding-conditions">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        As a character acquires wounds in various locations, additional effects start to apply called conditions.
+                      </li>
+                      <li>
+                        Head conditions
+                        <ul>
+                          <li>
+                            3+ wounds: The character dies. A character who is dead can no longer perform any actions.
+                          </li>
+                          <li>
+                            2+ wounds: The character receives only half as many ap to use per turn as they otherwise would.
+                          </li>
+                          <li>
+                            1+ wounds: The character receives dAdv to detection and tech rolls.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Torso conditions
+                        <ul>
+                          <li>
+                            3+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character dies. A character who is dead can no longer perform any actions.
+                          </li>
+                          <li>
+                            2+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character spends the ap for a null action instead of the desired action.
+                          </li>
+                          <li>
+                            1+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is a 1, the character loses 1 ap. If this would leave them with less ap than is required to perform the action, they do not perform that action.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Arm conditions
+                        <ul>
+                          <li>
+                            3+ wounds: The character cannot perform an action that uses both hands.
+                          </li>
+                          <li>
+                            2+ wounds: The character receives *dAdv when performing an action that uses both hands.
+                          </li>
+                          <li>
+                            1+ wounds: The character cannot receive Adv when performing an action that uses both hands.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Leg conditions
+                        <ul>
+                          <li>
+                            3+ wounds: The character permanently counts as ducking, and must spend twice as much ap when performing move actions as they otherwise would.
+                          </li>
+                          <li>
+                            2+ wounds: The character moves half as far as normal with move actions.
+                          </li>
+                          <li>
+                            1+ wounds: The character can no longer perform the run action.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -689,7 +784,77 @@
                 </div>
                 <div id="collapse-wounding-armor" class="collapse" aria-labelledby="wounding-armor">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        Armor consists of four pieces - one piece for each location that could acquire wounds. Each piece consists of a material and a pattern. The material of the armor piece determines what wounds a character will acquire based on the total damage received in that location from an attack.
+                      </li>
+                    </ul>
+                    <table id="armor-materials" class="basic-table">
+                      <thead>
+                        <tr>
+                          <th>Material</th>
+                          <th>No Wound</th>
+                          <th>Flesh Wound</th>
+                          <th>Grievous Wound</th>
+                          <th>Weight*</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Alloy</td>
+                          <td>1-8 damage</td>
+                          <td>9+ damage</td>
+                          <td>---</td>
+                          <td>3h / 12t / 6a / 9l</td>
+                        </tr>
+                        <tr>
+                          <td>Polymer</td>
+                          <td>1-6 damage</td>
+                          <td>7-11 damage</td>
+                          <td>12+ damage</td>
+                          <td>2h / 8t / 4a / 6l</td>
+                        </tr>
+                        <tr>
+                          <td>Fiber</td>
+                          <td>1-3 damage</td>
+                          <td>4-10 damage</td>
+                          <td>11+ damage</td>
+                          <td>1h / 4t / 2a / 3l</td>
+                        </tr>
+                        <tr>
+                          <td>None/Framework</td>
+                          <td>1-2 damage</td>
+                          <td>3-7 damage</td>
+                          <td>8+ damage</td>
+                          <td>0h / 0t / 0a / 0l</td>
+                        </tr>
+                        <tr>
+                          <td colspan="5">*weights are given as "head / torso / arms / legs"</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="armor-patterns" class="basic-table">
+                      <thead>
+                        <tr>
+                          <th>Pattern</th>
+                          <th colspan="3">Effect</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Bulked</td>
+                          <td colspan="3">Ignore effects that change flesh wounds to grievous wounds, change "no wound" results to flesh wounds, or cause double wounds. The armor weighs twice as much. Cannot be applied to "none/framework" armor.</td>
+                        </tr>
+                        <tr>
+                          <td>Fitted</td>
+                          <td colspan="3">No additional effect</td>
+                        </tr>
+                        <tr>
+                          <td>Paneled</td>
+                          <td colspan="3">Whenever an opponent rolls a 4 or lower on the damage roll, it counts as a flesh wound. Each piece of armor weighs 1 less. Cannot be applied to fiber armor or "none/framework" armor.</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
