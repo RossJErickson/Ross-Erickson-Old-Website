@@ -38,6 +38,10 @@ td, th {
   font-style: italic;
 }
 
+.footnote {
+  margin: 1rem;
+}
+
 .strong {
   font-weight: 700;
 }
