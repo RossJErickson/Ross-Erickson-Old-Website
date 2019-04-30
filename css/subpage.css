@@ -50,6 +50,10 @@ li {
   width: 96%;
 }
 
+.emphasis {
+  font-style: italic;
+}
+
 .hovered {
   opacity: .75;
 }
@@ -71,6 +75,10 @@ li {
   bottom: 9px;
   font-style: italic;
   position: relative;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /*************************** Desktops and Laptops ***************************/
