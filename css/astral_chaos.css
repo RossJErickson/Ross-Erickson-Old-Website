@@ -10,11 +10,6 @@ ol {
   list-style: decimal;
 }
 
-.basic-table {
-  table-layout: fixed;
-  width: 60%;
-}
-
 .card-body {
   background-color: rgb(125, 155, 195);
   color: black;

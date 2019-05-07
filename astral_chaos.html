@@ -626,7 +626,32 @@
                 </div>
                 <div id="collapse-cqc-types" class="collapse" aria-labelledby="cqc-types">
                   <div class="card-body">
-                    placeholder text
+                    <table class="wide-table">
+                      <thead>
+                        <tr>
+                          <th>Attack</th>
+                          <th colspan="3">Immediate Effect</th>
+                          <th colspan="3">Effect on next CQC Action if successful</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Strike</td>
+                          <td colspan="3">The striking character gains Adv on their initiative roll, but dAdv on their damage roll. Successfully striking a target always interrupts their action regardless of if they were dealt a wound or not.</td>
+                          <td colspan="3">The struck character gains dAdv on their initiative roll.</td>
+                        </tr>
+                        <tr>
+                          <td>Jab</td>
+                          <td colspan="3">The jabbing character may add their weapon's reach to their initiative roll if their target did not make a CQC defense.</td>
+                          <td colspan="3">---</td>
+                        </tr>
+                        <tr>
+                          <td>Swing</td>
+                          <td colspan="3">The swinging character may add their weapon's size to their damage roll.</td>
+                          <td colspan="3">---</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -715,62 +740,75 @@
                         As a character acquires wounds in various locations, additional effects start to apply called conditions.
                       </li>
                       <li>
-                        Head conditions
-                        <ul>
-                          <li>
-                            3+ wounds: The character dies. A character who is dead can no longer perform any actions.
-                          </li>
-                          <li>
-                            2+ wounds: The character receives only half as many ap to use per turn as they otherwise would.
-                          </li>
-                          <li>
-                            1+ wounds: The character receives dAdv to detection and tech rolls.
-                          </li>
-                        </ul>
+                        If a location that is already at maximum wound count receives another wound, that character dies from massive injury.
                       </li>
                       <li>
-                        Torso conditions
-                        <ul>
-                          <li>
-                            3+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character dies. A character who is dead can no longer perform any actions.
-                          </li>
-                          <li>
-                            2+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character spends the ap for a null action instead of the desired action.
-                          </li>
-                          <li>
-                            1+ wounds: Whenever the character attempts to make an action, first roll a d4. If the result is a 1, the character loses 1 ap. If this would leave them with less ap than is required to perform the action, they do not perform that action.
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Arm conditions
-                        <ul>
-                          <li>
-                            3+ wounds: The character cannot perform an action that uses both hands.
-                          </li>
-                          <li>
-                            2+ wounds: The character receives *dAdv when performing an action that uses both hands.
-                          </li>
-                          <li>
-                            1+ wounds: The character cannot receive Adv when performing an action that uses both hands.
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Leg conditions
-                        <ul>
-                          <li>
-                            3+ wounds: The character permanently counts as ducking, and must spend twice as much ap when performing move actions as they otherwise would.
-                          </li>
-                          <li>
-                            2+ wounds: The character moves half as far as normal with move actions.
-                          </li>
-                          <li>
-                            1+ wounds: The character can no longer perform the run action.
-                          </li>
-                        </ul>
+                        Conditions may result in a character dying. If a character is dead, they can no longer perform any actions.
                       </li>
                     </ul>
+                    <table class="wide-table">
+                      <thead>
+                        <tr>
+                          <th>Location</th>
+                          <th>Wound Count</th>
+                          <th colspan="10">Condition Effect</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-top-double">
+                          <td rowspan="3">Head</td>
+                          <td>3</td>
+                          <td colspan="10">The character dies.</td>
+                        </tr>
+                        <tr>
+                          <td>2 or more</td>
+                          <td colspan="10">The character receives only half as many ap to use per turn as they otherwise would.</td>
+                        </tr>
+                        <tr>
+                          <td>1 or more</td>
+                          <td colspan="10">The character receives dAdv to detection and tech rolls.</td>
+                        </tr>
+                        <tr class="border-top-double">
+                          <td rowspan="3">Torso</td>
+                          <td>3</td>
+                          <td colspan="10">Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character dies.</td>
+                        </tr>
+                        <tr>
+                          <td>2 or more</td>
+                          <td colspan="10">Whenever the character attempts to make an action, first roll a d4. If the result is less than the number of ap spent for the action, the character spends the ap for a null action instead of the desired action.</td>
+                        </tr>
+                        <tr>
+                          <td>1 or more</td>
+                          <td colspan="10">Whenever the character attempts to make an action, first roll a d4. If the result is a 1, the character loses 1 ap. If this would leave them with less ap than is required to perform the action, they do not perform that action.</td>
+                        </tr>
+                        <tr class="border-top-double">
+                          <td rowspan="3">Arms</td>
+                          <td>3</td>
+                          <td colspan="10">The character cannot perform an action that uses both hands.</td>
+                        </tr>
+                        <tr>
+                          <td>2 or more</td>
+                          <td colspan="10">The character receives *dAdv when performing an action that uses both hands.</td>
+                        </tr>
+                        <tr>
+                          <td>1 or more</td>
+                          <td colspan="10">The character cannot receive Adv when performing an action that uses both hands.</td>
+                        </tr>
+                        <tr class="border-top-double">
+                          <td rowspan="3">Legs</td>
+                          <td>3</td>
+                          <td colspan="10">The character permanently counts as ducking, and must spend twice as much ap when performing move actions as they otherwise would.</td>
+                        </tr>
+                        <tr>
+                          <td>2 or more</td>
+                          <td colspan="10">The character moves half as far as normal with move actions.</td>
+                        </tr>
+                        <tr>
+                          <td>1 or more</td>
+                          <td colspan="10">The character can no longer perform the run action.</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
