@@ -26,7 +26,7 @@
         <div class="nav flex-column nav-pills" id="category-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active" id="fundamentals-tab" data-toggle="pill" href="#fundamentals" role="tab" aria-controls="v-pills-fundamentals" aria-selected="true">Fundamentals</a>
           <a class="nav-link" id="shooting-tab" data-toggle="pill" href="#shooting" role="tab" aria-controls="v-pills-shooting" aria-selected="false">Shooting</a>
-          <a class="nav-link" id="cqc-tab" data-toggle="pill" href="#cqc" role="tab" aria-controls="v-pills-cqc" aria-selected="false"><span class="grey">Close Quarters Combat (CQC)</span></a>
+          <a class="nav-link" id="cqc-tab" data-toggle="pill" href="#cqc" role="tab" aria-controls="v-pills-cqc" aria-selected="false">Close Quarters Combat (CQC)</a>
           <a class="nav-link" id="wounding-tab" data-toggle="pill" href="#wounding" role="tab" aria-controls="v-pills-wounding" aria-selected="false">Wounding</a>
           <a class="nav-link" id="tech-tab" data-toggle="pill" href="#tech" role="tab" aria-controls="v-pills-tech" aria-selected="false"><span class="grey">Tech</span></a>
           <a class="nav-link" id="ordnance-tab" data-toggle="pill" href="#ordnance" role="tab" aria-controls="v-pills-ordnance" aria-selected="false"><span class="grey">Ordnance</span></a>
@@ -126,17 +126,17 @@
                   <div class="card-body">
                     <ul>
                       <li>
-                        Combat in the game occurs in rounds, in which each character takes a turn. First, all PCs take their turns, then all NPCs take their turns.
-                        <ul><li>In certain situations where NPCs should act first (for example, if the PCs are being ambushed), simply allow the relevant NPCs to take their turns before the first round begins.</li></ul>
+                        Combat in the game occurs in rounds, each of which consists of the PC phase followed by the CQC phase, and then the NPC phase. Each character takes a turn during the phase corresponding to their status as a PC or an NPC (the use of the CQC phase is described in the CQC section).
+                        <ul><li>In certain situations where NPCs should act first (for example, if the PCs are being ambushed), simply play out an NPC phase before the first round begins.</li></ul>
                       </li>
                       <li>
-                        When the PCs take their turns, each PC is allowed to perform actions as they wish. PCs each get four action points to use during the round. Action points are spent to perform actions, with a cost that varies per action. If a PC does not have enough action points remaining for an action, that action may not be performed. Each PC must use all of their action points each round.
+                        During the PC phase, each PC is allowed to perform actions as they wish. PCs each get four action points to use during the round. Action points are spent to perform actions, with a cost that varies per action. If a PC does not have enough action points remaining for an action, that action may not be performed. Each PC must use all of their action points each round.
                       </li>
                       <li>
                         PCs may spend their action points in any arrangement--any given PC does not need to spend all their action points before another PC can act. Furthermore, actions may be taken simultaneously, such as shooting a gun half-way through a move action. Actions of different PCs may also be taken simultaneously, such as a heavily armored character shielding a wounded character as they move to cover.
                       </li>
                       <li>
-                        When the NPCs take their turns, they each get a number of action points based on their given rules. Otherwise, the NPCs may all take their turns in the same manner and with the same restrictions as PCs.
+                        During the NPC phase, each NPC gets a number of action points based on their given rules. Otherwise, the NPCs may all take their turns in the same manner and with the same restrictions as PCs.
                         <ul><li>Generally, NPCs get four action points each unless they are particularly sluggish or quick.</li></ul>
                       </li>
                     </ul>
@@ -538,24 +538,23 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table id="ranged-weapon-cartridges"class="basic-table ranged-weapon-cartridges">
+                    <table id="ranged-weapon-cartridges"class="wide-table ranged-weapon-cartridges">
                       <thead>
                         <tr>
                           <th>Cartridges</th>
                           <th>Type</th>
-                          <th>Effect</th>
-                          <th></th>
+                          <th colspan="3">Effect</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td rowspan="9"></td>
                           <td>Slug</td>
-                          <td colspan="2">Rolls of "No Wound" instead count as a flesh wound.</td>
+                          <td colspan="3">Rolls of "No Wound" instead count as a flesh wound.</td>
                         </tr>
                         <tr>
                           <td>Rail</td>
-                          <td colspan="2">
+                          <td colspan="3">
                             -You may only take the "shoot" action once per turn.<br>
                             -Short barreled guns get +3 to their upper optimum range and +1 damage.<br>
                             -Middle barreled guns get +7 to their upper optimum range and +2 damage.<br>
@@ -564,31 +563,31 @@
                         </tr>
                         <tr>
                           <td>Scattershot</td>
-                          <td colspan="2">Firing beyond optimum range gives dAdv on the wounding roll instead of the hit roll.</td>
+                          <td colspan="3">Firing beyond optimum range gives dAdv on the wounding roll instead of the hit roll.</td>
                         </tr>
                         <tr>
                           <td>Photon</td>
-                          <td colspan="2">Suppression caused by this weapon gives not only +3 to shot difficulty rolls, but also dAdv.</td>
+                          <td colspan="3">Suppression caused by this weapon gives not only +3 to shot difficulty rolls, but also dAdv.</td>
                         </tr>
                         <tr>
                           <td>Phaser Bolt</td>
-                          <td colspan="2">This weapon has no maximum effective range.</td>
+                          <td colspan="3">This weapon has no maximum effective range.</td>
                         </tr>
                         <tr>
                           <td>Impulse</td>
-                          <td colspan="2">-Grievous wounds caused by this weapon instead count as flesh wounds.<br>-Ap spent towards reloading may also be spent towards another action.</td>
+                          <td colspan="3">-Grievous wounds caused by this weapon instead count as flesh wounds.<br>-Ap spent towards reloading may also be spent towards another action.</td>
                         </tr>
                         <tr>
                           <td>Concussion</td>
-                          <td colspan="2">When firing beyond optimum range, shooting takes 4ap but doesn't give dAdv.</td>
+                          <td colspan="3">When firing beyond optimum range, shooting takes 4ap but doesn't give dAdv.</td>
                         </tr>
                         <tr>
                           <td>Shell Plasma</td>
-                          <td colspan="2">Flesh wounds caused by this weapon instead count as grievous wounds.</td>
+                          <td colspan="3">Flesh wounds caused by this weapon instead count as grievous wounds.</td>
                         </tr>
                         <tr>
                           <td>EMCF Plasma</td>
-                          <td colspan="2">This weapon cannot fire beyond its optimum range, but always deals double-wounds.</td>
+                          <td colspan="3">This weapon cannot fire beyond its optimum range, but always deals double-wounds.</td>
                         </tr>
                       </tbody>
                     </table>
@@ -606,13 +605,55 @@
                 <div class="card-header" id="cqc-action" data-toggle="collapse" data-target="#collapse-cqc-action" aria-expanded="false" aria-controls="collapse-cqc-action">
                   <h2 class="mb-0">
                     <button class="btn btn-link">
-                      Making a Move in CQC
+                      Performing an Action in CQC
                     </button>
                   </h2>
                 </div>
                 <div id="collapse-cqc-action" class="collapse" aria-labelledby="cqc-action">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        When a character is within 1u of an enemy, that character is considered to be in Close Quarters Combat (CQC).
+                      </li>
+                      <li>
+                        Characters in CQC do not perform actions during their usual phase. Instead, they perform actions during the CQC phase (see fundamentals subsection: the combat round). Each character in CQC chooses one action that they will perform, and then all such actions are performed as a set according to the rules below. Once this has happened, repeat the process until no characters in CQC have any ap remaining.
+                      </li>
+                      <li>
+                        When a set of actions is performed in CQC, each participating character rolls a d12 to determine their initiative for their action. The actions are then performed in order of initiative from highest to lowest. Any actions with tied initiative are performed as if the other actions with the same initiative had not yet occurred.
+                      </li>
+                      <li>
+                        Negations
+                        <ul>
+                          <li>
+                            If an action leads to a wound being dealt, and the character who was wounded had not yet performed their chosen action, then that character replaces their chosen action with a null action.
+                          </li>
+                          <li>
+                            When a character performs a CQC defense, any CQC attack actions or shooting actions later in that set have no effect on the defending character (and are considered negated).
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        CQC attacks and defenses have both immediate effects and consequent effects. Immediate effects apply to the CQC attack or defense itself, as it is performed. Consequent effects of a CQC attack or defense apply to the next set of actions in CQC.
+                        <ul>
+                          <li>
+                            Note, the next set of actions performed in CQC may not happen until the following round.
+                          </li>
+                          <li>
+                            Consequent effects of CQC attacks and defenses do not apply if the CQC attack or defense was negated.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Balance:
+                        <ul>
+                          <li>
+                            When a character with Adv or dAdv on initiative performs a CQC attack or defense, add their CQC weapon's balance to their initiative.
+                          </li>
+                          <li>
+                            When a character is using a CQC weapon one-handed, if that weapon has a negative balance, always add the balance to their initiative. This is in addition to when adding it as described above.
+                          </li>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -630,25 +671,77 @@
                       <thead>
                         <tr>
                           <th>Attack</th>
-                          <th colspan="3">Immediate Effect</th>
-                          <th colspan="3">Effect on next CQC Action if successful</th>
+                          <th colspan="4">Immediate Effect</th>
+                          <th colspan="4">Consequent Effect</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>Strike</td>
-                          <td colspan="3">The striking character gains Adv on their initiative roll, but dAdv on their damage roll. Successfully striking a target always interrupts their action regardless of if they were dealt a wound or not.</td>
-                          <td colspan="3">The struck character gains dAdv on their initiative roll.</td>
+                          <td colspan="4">The striking character gains Adv on their initiative roll, but dAdv on their damage roll. Successfully striking a target always negates their action regardless of if they were dealt a wound or not.</td>
+                          <td colspan="4">The struck character gains dAdv on their next initiative roll.</td>
                         </tr>
                         <tr>
                           <td>Jab</td>
-                          <td colspan="3">The jabbing character may add their weapon's reach to their initiative roll if their target did not make a CQC defense.</td>
-                          <td colspan="3">---</td>
+                          <td colspan="4">The jabbing character may add their weapon's reach to their initiative roll if their target did not choose to perform a CQC defense.</td>
+                          <td colspan="4">---</td>
                         </tr>
                         <tr>
                           <td>Swing</td>
-                          <td colspan="3">The swinging character may add their weapon's size to their damage roll.</td>
-                          <td colspan="3">---</td>
+                          <td colspan="4">The swinging character may add their weapon's size to their damage roll.</td>
+                          <td colspan="4">---</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="wide-table">
+                      <thead>
+                        <tr>
+                          <th>Defense</th>
+                          <th colspan="4">Immediate Effect</th>
+                          <th colspan="4">Effect on next CQC Action if successful</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Block</td>
+                          <td colspan="4">The blocking character gains Adv on their initiative roll, and may add their weapon's reach to their initiative roll.</td>
+                          <td colspan="4">The blocking character gains dAdv on their next initiative roll if another character performed an attack against them.</td>
+                        </tr>
+                        <tr>
+                          <td>Deflect</td>
+                          <td colspan="4">The deflecting character gains Adv on their initiative roll.</td>
+                          <td colspan="4">Any character whose attack was deflected gains *dAdv on their next initiative roll.</td>
+                        </tr>
+                        <tr>
+                          <td>Dodge</td>
+                          <td colspan="4">---</td>
+                          <td colspan="4">The dodging character gains Adv on their next initiative roll. Any character whose attack was dodged gains *dAdv on their next initiative roll.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="wide-table">
+                      <thead>
+                        <tr>
+                          <th>Non-CQC Actions in CQC</th>
+                          <th colspan="4">Immediate Effect</th>
+                          <th colspan="4">Effect on next CQC Action if successful</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Shoot</td>
+                          <td colspan="4">The shooting character must apply their ranged weapon's balance to their initiative if any of their hit rolls would have Adv or dAdv. A character shooting in CQC must still roll to hit as usual.</td>
+                          <td colspan="4">---</td>
+                        </tr>
+                        <tr>
+                          <td>Use Tech Item</td>
+                          <td colspan="4">---</td>
+                          <td colspan="4">---</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td colspan="4">Performing any other non-CQC action gives that character dAdv on their initiative.</td>
+                          <td colspan="4">---</td>
                         </tr>
                       </tbody>
                     </table>
@@ -665,7 +758,168 @@
                 </div>
                 <div id="collapse-cqc-equipment" class="collapse" aria-labelledby="cqc-equipment">
                   <div class="card-body">
-                    placeholder text
+                    <ul>
+                      <li>
+                        CQC weapons consist of a head, handle, and cell.
+                      </li>
+                      <li>
+                        A CQC weapon has the following stats associated with it: balance, reach, damage (base and swing), and size. The components comprising the CQC weapon determine its stats.
+                      </li>
+                      <li>
+                        A CQC weapon has a size of 0 by default, which is then increased based on the components it has. CQC weapons may not exceed a size of 7.
+                      </li>
+                      <li>
+                        The GM decides the name of the CQC weapon based on its components.
+                      </li>
+                      <li>
+                        Example: If a CQC weapon has a short blade, a haft, and a solar cell, the GM might call it a "Solar Spear" and it would have the following stats:
+                        <ul>
+                          <li>Balance: -1</li>
+                          <li>Reach: 4</li>
+                          <li>Damage: 0 / 0 swing</li>
+                          <li>Solar: If this weapon's attack is deflected, its user gains dAdv on initiative as a consequent effect instead of *dAdv.</li>
+                          <li>Size: 5</li>
+                        </ul>
+                    </ul>
+                    <table id="cqc-weapon-head" class="basic-table">
+                      <thead>
+                        <tr>
+                          <th>Head</th>
+                          <th>Type</th>
+                          <th>Balance</th>
+                          <th>Reach</th>
+                          <th>Damage</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="6"></td>
+                          <td>Long Blade</td>
+                          <td>-1</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>+4</td>
+                        </tr>
+                        <tr>
+                          <td>Moderate Blade</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>+3</td>
+                        </tr>
+                        <tr>
+                          <td>Short Blade</td>
+                          <td>1</td>
+                          <td>+0</td>
+                          <td>0</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>Cleaver</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>3*</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Hammer</td>
+                          <td>-1</td>
+                          <td>0</td>
+                          <td>6*</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>None**</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>+0</td>
+                        </tr>
+                        <tr>
+                          <td colspan="6">
+                            *This damage applies only to swing CQC attacks<br>
+                            **Grievous wounds dealt by CQC weapons without a head count as flesh wounds instead.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="cqc-weapon-handle" class="basic-table">
+                      <thead>
+                        <tr>
+                          <th>Handle</th>
+                          <th>Type</th>
+                          <th>Balance</th>
+                          <th>Reach</th>
+                          <th>Size Increase</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3"></td>
+                          <td>Haft</td>
+                          <td>-2</td>
+                          <td>+4</td>
+                          <td>+4</td>
+                        </tr>
+                        <tr>
+                          <td>Extended Grip</td>
+                          <td>-1</td>
+                          <td>+2</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>Grip</td>
+                          <td>+0</td>
+                          <td>+0</td>
+                          <td>+0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="cqc-weapon-cell" class="wide-table">
+                      <thead>
+                        <tr>
+                          <th>Cell</th>
+                          <th>Type</th>
+                          <th colspan="7">Effect</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="8"></td>
+                          <td>Force</td>
+                          <td colspan="7">When a character succesfully blocks a force weapon's attack, they get *dAdv on initiative as a consequent effect of blocking instead of dAdv.</td>
+                        </tr>
+                        <tr>
+                          <td>Warp</td>
+                          <td colspan="7">When a warp weapon makes a roll of "No Wound", it instead counts as a flesh wound.</td>
+                        </tr>
+                        <tr>
+                          <td>Vein</td>
+                          <td colspan="7">Vein weapons gain Adv on swing damage.</td>
+                        </tr>
+                        <tr>
+                          <td>Solar</td>
+                          <td colspan="7">If a solar weapon's attack is deflected, its user gains dAdv on initiative as a consequent effect instead of *dAdv.</td>
+                        </tr>
+                        <tr>
+                          <td>Shrieking</td>
+                          <td colspan="7">When a character with a shrieking weapon successfully performs a swing CQC attack, the character who was hit gets dAdv on initiative as a consequent effect.</td>
+                        </tr>
+                        <tr>
+                          <td>Singing</td>
+                          <td colspan="7">When a character with a singing weapon successfully performs a swing CQC attack, they get Adv on initiative as a consequent effect.</td>
+                        </tr>
+                        <tr>
+                          <td>Sheathed Plasma</td>
+                          <td colspan="7">Swinging a sheathed plasma weapon gives dAdv on initiative as an immediate effect. Sheathed plasma weapons deal double wounds.</td>
+                        </tr>
+                        <tr>
+                          <td>Plasma Ridge</td>
+                          <td colspan="7">Flesh wounds dealt by plasma ridge weapons count as grievous wounds instead. This effect and having no head on a CQC weapon cancel each other out.</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
