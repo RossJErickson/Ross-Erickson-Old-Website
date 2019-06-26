@@ -51,6 +51,10 @@ function hideSubpage(target, callbackFunction) {
     }
     }
   );
+  if ($(window).width() <= 1024) {
+    $(window).scrollTop(0);
+    alert("done");
+  }
 }
 
 function edgeShift(target) {
