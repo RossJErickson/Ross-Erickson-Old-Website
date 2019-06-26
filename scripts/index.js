@@ -1,8 +1,8 @@
 var debugMode = true;
 
 $(".arm").click(function() {
-  flicker($(this));
-  edgeShift($(this));
+    flicker($(this));
+    edgeShift($(this));
 });
 
 $(".arm").hover(function() {
@@ -55,6 +55,10 @@ function hideSubpage(target, callbackFunction) {
 
 function edgeShift(target) {
   var targetClass;
+  var timeDelay = 300;
+  if ($(window).width() <= 1024) {
+    timeDelay = 5;
+  }
   if (target.hasClass("upper-left-arm")) {
     targetClass = "upper-left-arm";
   } else if (target.hasClass("upper-right-arm")) {
@@ -65,7 +69,7 @@ function edgeShift(target) {
     targetClass = "lower-left-arm";
   }
   if (!target.hasClass(targetClass + "-clicked")) {
-    target.addClass(targetClass + "-clicked", 300, function() {
+    target.addClass(targetClass + "-clicked", timeDelay, function() {
       target.addClass("clicked");
       displaySubpage( $("#" + target.attr("data-subpage")) );
       }
@@ -74,7 +78,7 @@ function edgeShift(target) {
     target.removeClass("clicked");
     target.attr("data-disabled", "true");
     hideSubpage($("#" + target.attr("data-subpage")), function() {
-      target.removeClass(targetClass + "-clicked", 300, function(){
+      target.removeClass(targetClass + "-clicked", timeDelay, function(){
         target.attr("data-disabled", "false");
         }
       );
@@ -82,7 +86,7 @@ function edgeShift(target) {
     );
     setTimeout(function() {
       target.removeClass(targetClass + "-hovered");
-      }, 300
+      }, timeDelay
     );
   }
 }
