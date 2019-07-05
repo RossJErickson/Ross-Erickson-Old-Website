@@ -1,3 +1,7 @@
+a:visited {
+  color: rgb(200, 150, 230);
+}
+
 body {
   color: white;
   background-color: rgb(50, 50, 50);
