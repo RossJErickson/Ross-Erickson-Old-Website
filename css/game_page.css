@@ -1,3 +1,7 @@
+a {
+  color: rgb(150, 150, 240);
+}
+
 a:visited {
   color: rgb(200, 150, 230);
 }
