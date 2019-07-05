@@ -1,4 +1,4 @@
-a {
+a, a:default, a:enabled, a:link {
   color: rgb(150, 150, 240);
 }
 
